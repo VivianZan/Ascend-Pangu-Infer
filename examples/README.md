@@ -59,6 +59,20 @@ python examples/speculative_inference_example.py
 - Acceptance rate tracking
 - Speedup measurement
 
+### 5. Combined Optimization (`combined_optimization.py`)
+
+Demonstrates using multiple optimization techniques together.
+
+```bash
+python examples/combined_optimization.py
+```
+
+**Features:**
+- Baseline performance measurement
+- Progressive optimization application
+- Performance comparison across techniques
+- Best practice recommendations
+
 ## Running Examples
 
 All examples can be run directly:
