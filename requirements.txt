@@ -1,0 +1,15 @@
+# Core dependencies
+numpy>=1.21.0
+torch>=2.0.0
+
+# Optional dependencies (for full functionality)
+# transformers>=4.30.0
+# accelerate>=0.20.0
+# sentencepiece>=0.1.99
+# protobuf>=3.20.0
+
+# MindSpore (optional, for checkpoint conversion)
+# mindspore>=2.0.0
+
+# Development dependencies
+pytest>=7.0.0
