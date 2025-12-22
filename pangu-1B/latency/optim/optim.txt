@@ -1,0 +1,730 @@
+No optim
+Batch-1 Input len-32 Output len-128
+INFO 12-18 12:48:20 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:48:20 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:48:20 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:48:20 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:48:22 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:48:26 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:48:26 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:48:26 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:48:26 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:48:26 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:48:26 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:48:26 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:48:42 [config.py:841] This model supports multiple tasks: {'reward', 'classify', 'embed', 'generate'}. Defaulting to 'generate'.
+INFO 12-18 12:48:42 [config.py:1472] Using max model len 32768
+INFO 12-18 12:48:42 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 12-18 12:48:42 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:48:42 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:48:42 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:48:42 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 12:48:43 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 12:48:51 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:48:51 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:48:51 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:48:51 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:48:53 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:48:55 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 12:48:56 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:48:57 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:48:57 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:48:57 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:48:57 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:48:57 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:48:57 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:48:57 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":false,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 12:49:09 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:49:09 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:49:09 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:49:09 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:49:11 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:49:17 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 12:49:18 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.24it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.24it/s]
+
+INFO 12-18 12:49:20 [default_loader.py:272] Loading weights took 0.69 seconds
+INFO 12-18 12:49:22 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 12:49:30 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 12:49:30 [backends.py:519] Dynamo bytecode transform time: 7.24 s
+INFO 12-18 12:49:33 [backends.py:193] Compiling a graph for general shape takes 1.97 s
+INFO 12-18 12:49:41 [monitor.py:34] torch.compile takes 9.22 s in total
+INFO 12-18 12:49:42 [worker_v1.py:181] Available memory: 55443583692, total memory: 65464696832
+INFO 12-18 12:49:42 [kv_cache_utils.py:716] GPU KV cache size: 694,144 tokens
+INFO 12-18 12:49:42 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.18x
+INFO 12-18 12:49:46 [model_runner_v1.py:2074] Graph capturing finished in 3 secs, took 0.01 GiB
+INFO 12-18 12:49:46 [core.py:172] init engine (profile, create kv cache, warmup model) took 23.62 seconds
+WARNING 12-18 12:49:47 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 12:49:47 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:49:47 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:49:47 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:49:47 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:04<00:16,  4.02s/it]Warmup iterations:  40%|████      | 2/5 [00:07<00:11,  3.97s/it]Warmup iterations:  60%|██████    | 3/5 [00:11<00:07,  3.96s/it]Warmup iterations:  80%|████████  | 4/5 [00:15<00:03,  3.95s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  3.95s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  3.96s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:03<00:35,  3.95s/it]Profiling iterations:  20%|██        | 2/10 [00:07<00:31,  3.94s/it]Profiling iterations:  30%|███       | 3/10 [00:11<00:27,  3.94s/it]Profiling iterations:  40%|████      | 4/10 [00:15<00:23,  3.95s/it]Profiling iterations:  50%|█████     | 5/10 [00:19<00:19,  3.98s/it]Profiling iterations:  60%|██████    | 6/10 [00:23<00:15,  3.99s/it]Profiling iterations:  70%|███████   | 7/10 [00:27<00:11,  4.00s/it]Profiling iterations:  80%|████████  | 8/10 [00:31<00:08,  4.00s/it]Profiling iterations:  90%|█████████ | 9/10 [00:35<00:04,  4.01s/it]Profiling iterations: 100%|██████████| 10/10 [00:39<00:00,  4.01s/it]Profiling iterations: 100%|██████████| 10/10 [00:39<00:00,  3.99s/it]
+Avg latency: 3.988616365008056 seconds
+10% percentile latency: 3.9421462448313833 seconds
+25% percentile latency: 3.9515643471386284 seconds
+50% percentile latency: 4.013106569182128 seconds
+75% percentile latency: 4.015272367745638 seconds
+90% percentile latency: 4.019317377731204 seconds
+99% percentile latency: 4.025625984128564 seconds
+No optim
+Batch-1 Input len-128 Output len-128
+INFO 12-18 12:51:04 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:51:04 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:51:04 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:51:04 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:51:05 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:51:09 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:51:09 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:51:09 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:51:09 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:51:09 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:51:09 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:51:09 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:51:25 [config.py:841] This model supports multiple tasks: {'classify', 'embed', 'generate', 'reward'}. Defaulting to 'generate'.
+INFO 12-18 12:51:25 [config.py:1472] Using max model len 32768
+INFO 12-18 12:51:25 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 12-18 12:51:25 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:51:25 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:51:25 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:51:25 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 12:51:27 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 12:51:35 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:51:35 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:51:35 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:51:35 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:51:36 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:51:39 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 12:51:40 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:51:40 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:51:40 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:51:40 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:51:40 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:51:40 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:51:40 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:51:40 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":false,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 12:51:53 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:51:53 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:51:53 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:51:53 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:51:54 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:52:01 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 12:52:01 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.32it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.32it/s]
+
+INFO 12-18 12:52:03 [default_loader.py:272] Loading weights took 0.66 seconds
+INFO 12-18 12:52:05 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 12:52:13 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 12:52:13 [backends.py:519] Dynamo bytecode transform time: 7.29 s
+INFO 12-18 12:52:15 [backends.py:193] Compiling a graph for general shape takes 1.95 s
+INFO 12-18 12:52:23 [monitor.py:34] torch.compile takes 9.25 s in total
+INFO 12-18 12:52:24 [worker_v1.py:181] Available memory: 55444792012, total memory: 65464696832
+INFO 12-18 12:52:24 [kv_cache_utils.py:716] GPU KV cache size: 694,144 tokens
+INFO 12-18 12:52:24 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.18x
+INFO 12-18 12:52:28 [model_runner_v1.py:2074] Graph capturing finished in 3 secs, took 0.01 GiB
+INFO 12-18 12:52:28 [core.py:172] init engine (profile, create kv cache, warmup model) took 22.92 seconds
+WARNING 12-18 12:52:29 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 12:52:29 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:52:29 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:52:29 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:52:29 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:03<00:15,  3.90s/it]Warmup iterations:  40%|████      | 2/5 [00:07<00:11,  3.83s/it]Warmup iterations:  60%|██████    | 3/5 [00:11<00:07,  3.92s/it]Warmup iterations:  80%|████████  | 4/5 [00:15<00:03,  3.96s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  3.94s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  3.93s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:03<00:34,  3.78s/it]Profiling iterations:  20%|██        | 2/10 [00:07<00:30,  3.76s/it]Profiling iterations:  30%|███       | 3/10 [00:11<00:26,  3.74s/it]Profiling iterations:  40%|████      | 4/10 [00:14<00:22,  3.73s/it]Profiling iterations:  50%|█████     | 5/10 [00:18<00:18,  3.73s/it]Profiling iterations:  60%|██████    | 6/10 [00:22<00:14,  3.73s/it]Profiling iterations:  70%|███████   | 7/10 [00:26<00:11,  3.73s/it]Profiling iterations:  80%|████████  | 8/10 [00:29<00:07,  3.73s/it]Profiling iterations:  90%|█████████ | 9/10 [00:33<00:03,  3.73s/it]Profiling iterations: 100%|██████████| 10/10 [00:37<00:00,  3.73s/it]Profiling iterations: 100%|██████████| 10/10 [00:37<00:00,  3.73s/it]
+Avg latency: 3.7319259220734238 seconds
+10% percentile latency: 3.721521096583456 seconds
+25% percentile latency: 3.7245525002945215 seconds
+50% percentile latency: 3.7257336527109146 seconds
+75% percentile latency: 3.728309740079567 seconds
+90% percentile latency: 3.7414571701548995 seconds
+99% percentile latency: 3.780176063189283 seconds
+No optim
+Batch-1 Input len-512 Output len-128
+INFO 12-18 12:53:43 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:53:43 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:53:43 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:53:43 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:53:45 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:53:49 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:53:49 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:53:49 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:53:49 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:53:49 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:53:49 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:53:49 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:54:07 [config.py:841] This model supports multiple tasks: {'embed', 'classify', 'reward', 'generate'}. Defaulting to 'generate'.
+INFO 12-18 12:54:07 [config.py:1472] Using max model len 32768
+INFO 12-18 12:54:07 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 12-18 12:54:07 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:54:07 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:54:07 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:54:07 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 12:54:08 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 12:54:16 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:54:16 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:54:16 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:54:16 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:54:17 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:54:20 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 12:54:21 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:54:22 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:54:22 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:54:22 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:54:22 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:54:22 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:54:22 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:54:22 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":false,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 12:54:35 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:54:35 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:54:35 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:54:35 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:54:36 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:54:42 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 12:54:42 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.37it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.37it/s]
+
+INFO 12-18 12:54:44 [default_loader.py:272] Loading weights took 0.66 seconds
+INFO 12-18 12:54:45 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 12:54:52 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 12:54:52 [backends.py:519] Dynamo bytecode transform time: 6.91 s
+INFO 12-18 12:54:55 [backends.py:193] Compiling a graph for general shape takes 1.83 s
+INFO 12-18 12:55:02 [monitor.py:34] torch.compile takes 8.74 s in total
+INFO 12-18 12:55:03 [worker_v1.py:181] Available memory: 55444624076, total memory: 65464696832
+INFO 12-18 12:55:03 [kv_cache_utils.py:716] GPU KV cache size: 694,144 tokens
+INFO 12-18 12:55:03 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.18x
+INFO 12-18 12:55:06 [model_runner_v1.py:2074] Graph capturing finished in 3 secs, took 0.01 GiB
+INFO 12-18 12:55:06 [core.py:172] init engine (profile, create kv cache, warmup model) took 21.67 seconds
+WARNING 12-18 12:55:07 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 12:55:08 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:55:08 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:55:08 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:55:08 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:03<00:15,  3.76s/it]Warmup iterations:  40%|████      | 2/5 [00:07<00:11,  3.72s/it]Warmup iterations:  60%|██████    | 3/5 [00:11<00:07,  3.71s/it]Warmup iterations:  80%|████████  | 4/5 [00:14<00:03,  3.70s/it]Warmup iterations: 100%|██████████| 5/5 [00:18<00:00,  3.69s/it]Warmup iterations: 100%|██████████| 5/5 [00:18<00:00,  3.70s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:03<00:33,  3.68s/it]Profiling iterations:  20%|██        | 2/10 [00:07<00:29,  3.68s/it]Profiling iterations:  30%|███       | 3/10 [00:11<00:25,  3.68s/it]Profiling iterations:  40%|████      | 4/10 [00:14<00:22,  3.68s/it]Profiling iterations:  50%|█████     | 5/10 [00:18<00:18,  3.68s/it]Profiling iterations:  60%|██████    | 6/10 [00:22<00:14,  3.68s/it]Profiling iterations:  70%|███████   | 7/10 [00:25<00:11,  3.68s/it]Profiling iterations:  80%|████████  | 8/10 [00:29<00:07,  3.68s/it]Profiling iterations:  90%|█████████ | 9/10 [00:33<00:03,  3.68s/it]Profiling iterations: 100%|██████████| 10/10 [00:36<00:00,  3.68s/it]Profiling iterations: 100%|██████████| 10/10 [00:36<00:00,  3.68s/it]
+Avg latency: 3.6825683697126808 seconds
+10% percentile latency: 3.677875166479498 seconds
+25% percentile latency: 3.681023682234809 seconds
+50% percentile latency: 3.6827624584548175 seconds
+75% percentile latency: 3.683600882301107 seconds
+90% percentile latency: 3.6876677178777753 seconds
+99% percentile latency: 3.687935698470101 seconds
+No optim
+Batch-1 Input len-2048 Output len-128
+INFO 12-18 12:56:20 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:56:20 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:56:20 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:56:20 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:56:21 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:56:25 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:56:25 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:56:25 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:56:25 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:56:25 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:56:25 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:56:25 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:56:41 [config.py:841] This model supports multiple tasks: {'generate', 'embed', 'classify', 'reward'}. Defaulting to 'generate'.
+INFO 12-18 12:56:41 [config.py:1472] Using max model len 32768
+INFO 12-18 12:56:41 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 12-18 12:56:41 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:56:41 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:56:41 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:56:41 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 12:56:42 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 12:56:51 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:56:51 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:56:51 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:56:51 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:56:52 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:56:55 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 12:56:56 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:56:57 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:56:57 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:56:57 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:56:57 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:56:57 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:56:57 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:56:57 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":false,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 12:57:10 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:57:10 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:57:10 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:57:10 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:57:11 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:57:17 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 12:57:18 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.37it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.37it/s]
+
+INFO 12-18 12:57:19 [default_loader.py:272] Loading weights took 0.66 seconds
+INFO 12-18 12:57:20 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 12:57:28 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 12:57:28 [backends.py:519] Dynamo bytecode transform time: 7.18 s
+INFO 12-18 12:57:30 [backends.py:193] Compiling a graph for general shape takes 1.90 s
+INFO 12-18 12:57:38 [monitor.py:34] torch.compile takes 9.08 s in total
+INFO 12-18 12:57:40 [worker_v1.py:181] Available memory: 55444542156, total memory: 65464696832
+INFO 12-18 12:57:40 [kv_cache_utils.py:716] GPU KV cache size: 694,144 tokens
+INFO 12-18 12:57:40 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.18x
+INFO 12-18 12:57:43 [model_runner_v1.py:2074] Graph capturing finished in 3 secs, took 0.01 GiB
+INFO 12-18 12:57:43 [core.py:172] init engine (profile, create kv cache, warmup model) took 22.74 seconds
+WARNING 12-18 12:57:44 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 12:57:44 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:57:44 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:57:44 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:57:44 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:03<00:15,  3.96s/it]Warmup iterations:  40%|████      | 2/5 [00:07<00:11,  3.92s/it]Warmup iterations:  60%|██████    | 3/5 [00:11<00:07,  3.92s/it]Warmup iterations:  80%|████████  | 4/5 [00:15<00:03,  3.91s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  3.91s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  3.92s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:03<00:35,  3.93s/it]Profiling iterations:  20%|██        | 2/10 [00:07<00:31,  3.93s/it]Profiling iterations:  30%|███       | 3/10 [00:11<00:27,  3.92s/it]Profiling iterations:  40%|████      | 4/10 [00:15<00:23,  3.91s/it]Profiling iterations:  50%|█████     | 5/10 [00:19<00:19,  3.91s/it]Profiling iterations:  60%|██████    | 6/10 [00:23<00:15,  3.91s/it]Profiling iterations:  70%|███████   | 7/10 [00:27<00:11,  3.91s/it]Profiling iterations:  80%|████████  | 8/10 [00:31<00:07,  3.91s/it]Profiling iterations:  90%|█████████ | 9/10 [00:35<00:03,  3.91s/it]Profiling iterations: 100%|██████████| 10/10 [00:39<00:00,  3.89s/it]Profiling iterations: 100%|██████████| 10/10 [00:39<00:00,  3.91s/it]
+Avg latency: 3.905420909821987 seconds
+10% percentile latency: 3.8881047327071427 seconds
+25% percentile latency: 3.8961029334459454 seconds
+50% percentile latency: 3.9096835027448833 seconds
+75% percentile latency: 3.920072868000716 seconds
+90% percentile latency: 3.9257667658850552 seconds
+99% percentile latency: 3.927210223656148 seconds
+No optim
+Batch-1 Input len-8192 Output len-128
+INFO 12-18 12:59:01 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:59:01 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:59:01 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:59:01 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:59:02 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:59:06 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:59:06 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:59:06 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:59:06 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:59:06 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:59:06 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:59:06 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:59:22 [config.py:841] This model supports multiple tasks: {'reward', 'embed', 'generate', 'classify'}. Defaulting to 'generate'.
+INFO 12-18 12:59:22 [config.py:1472] Using max model len 32768
+INFO 12-18 12:59:22 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 12-18 12:59:22 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 12:59:22 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 12:59:22 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 12:59:22 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 12:59:23 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 12:59:31 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:59:31 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:59:31 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:59:31 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:59:33 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:59:35 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 12:59:37 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 12:59:37 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 12:59:37 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 12:59:37 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 12:59:37 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 12:59:37 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 12:59:37 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 12:59:37 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":false,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 12:59:50 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 12:59:50 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 12:59:50 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 12:59:50 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 12:59:51 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 12:59:57 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 12:59:58 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.31it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.31it/s]
+
+INFO 12-18 13:00:00 [default_loader.py:272] Loading weights took 0.66 seconds
+INFO 12-18 13:00:01 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 13:00:09 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 13:00:09 [backends.py:519] Dynamo bytecode transform time: 7.17 s
+INFO 12-18 13:00:12 [backends.py:193] Compiling a graph for general shape takes 1.93 s
+INFO 12-18 13:00:20 [monitor.py:34] torch.compile takes 9.11 s in total
+INFO 12-18 13:00:21 [worker_v1.py:181] Available memory: 55445148364, total memory: 65464696832
+INFO 12-18 13:00:21 [kv_cache_utils.py:716] GPU KV cache size: 694,144 tokens
+INFO 12-18 13:00:21 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.18x
+INFO 12-18 13:00:25 [model_runner_v1.py:2074] Graph capturing finished in 3 secs, took 0.01 GiB
+INFO 12-18 13:00:25 [core.py:172] init engine (profile, create kv cache, warmup model) took 23.36 seconds
+WARNING 12-18 13:00:26 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 13:00:26 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:00:26 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:00:26 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:00:26 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:03<00:15,  4.00s/it]Warmup iterations:  40%|████      | 2/5 [00:07<00:11,  3.98s/it]Warmup iterations:  60%|██████    | 3/5 [00:11<00:07,  3.98s/it]Warmup iterations:  80%|████████  | 4/5 [00:15<00:03,  4.00s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  4.01s/it]Warmup iterations: 100%|██████████| 5/5 [00:19<00:00,  4.00s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:04<00:37,  4.15s/it]Profiling iterations:  20%|██        | 2/10 [00:08<00:33,  4.13s/it]Profiling iterations:  30%|███       | 3/10 [00:12<00:28,  4.11s/it]Profiling iterations:  40%|████      | 4/10 [00:16<00:24,  4.10s/it]Profiling iterations:  50%|█████     | 5/10 [00:20<00:20,  4.10s/it]Profiling iterations:  60%|██████    | 6/10 [00:24<00:16,  4.09s/it]Profiling iterations:  70%|███████   | 7/10 [00:28<00:12,  4.09s/it]Profiling iterations:  80%|████████  | 8/10 [00:32<00:08,  4.09s/it]Profiling iterations:  90%|█████████ | 9/10 [00:36<00:04,  4.08s/it]Profiling iterations: 100%|██████████| 10/10 [00:40<00:00,  4.03s/it]Profiling iterations: 100%|██████████| 10/10 [00:40<00:00,  4.07s/it]
+Avg latency: 4.073847183026373 seconds
+10% percentile latency: 4.045770406257361 seconds
+25% percentile latency: 4.082876322092488 seconds
+50% percentile latency: 4.085565970279276 seconds
+75% percentile latency: 4.0914666331373155 seconds
+90% percentile latency: 4.111148316413164 seconds
+99% percentile latency: 4.147299108561128 seconds
+Optim
+Batch-1 Input len-32 Output len-128
+INFO 12-18 13:01:44 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:01:44 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:01:44 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:01:44 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:01:45 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:01:49 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:01:49 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:01:49 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:01:49 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:01:49 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:01:49 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:01:49 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:02:06 [config.py:841] This model supports multiple tasks: {'generate', 'embed', 'reward', 'classify'}. Defaulting to 'generate'.
+INFO 12-18 13:02:06 [config.py:1472] Using max model len 32768
+INFO 12-18 13:02:06 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.
+WARNING 12-18 13:02:06 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:02:06 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:02:06 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:02:06 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 13:02:07 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 13:02:15 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:02:15 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:02:15 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:02:15 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:02:16 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:02:19 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 13:02:20 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:02:20 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:02:20 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:02:20 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:02:20 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:02:20 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:02:20 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:02:20 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 13:02:33 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:02:33 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:02:33 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:02:33 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:02:34 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:02:41 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 13:02:41 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.32it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.32it/s]
+
+INFO 12-18 13:02:43 [default_loader.py:272] Loading weights took 0.67 seconds
+INFO 12-18 13:02:45 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 13:02:53 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 13:02:53 [backends.py:519] Dynamo bytecode transform time: 7.30 s
+INFO 12-18 13:02:55 [backends.py:193] Compiling a graph for general shape takes 1.98 s
+INFO 12-18 13:03:04 [monitor.py:34] torch.compile takes 9.29 s in total
+INFO 12-18 13:03:04 [worker_v1.py:181] Available memory: 55640994508, total memory: 65464696832
+INFO 12-18 13:03:04 [kv_cache_utils.py:716] GPU KV cache size: 696,576 tokens
+INFO 12-18 13:03:04 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.26x
+INFO 12-18 13:04:14 [model_runner_v1.py:2074] Graph capturing finished in 69 secs, took 0.19 GiB
+INFO 12-18 13:04:14 [core.py:172] init engine (profile, create kv cache, warmup model) took 88.96 seconds
+WARNING 12-18 13:04:15 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 13:04:15 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:04:15 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:04:15 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:04:15 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:01<00:06,  1.57s/it]Warmup iterations:  40%|████      | 2/5 [00:03<00:04,  1.52s/it]Warmup iterations:  60%|██████    | 3/5 [00:04<00:03,  1.51s/it]Warmup iterations:  80%|████████  | 4/5 [00:06<00:01,  1.50s/it]Warmup iterations: 100%|██████████| 5/5 [00:07<00:00,  1.50s/it]Warmup iterations: 100%|██████████| 5/5 [00:07<00:00,  1.51s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:01<00:13,  1.49s/it]Profiling iterations:  20%|██        | 2/10 [00:02<00:11,  1.47s/it]Profiling iterations:  30%|███       | 3/10 [00:04<00:10,  1.46s/it]Profiling iterations:  40%|████      | 4/10 [00:05<00:08,  1.46s/it]Profiling iterations:  50%|█████     | 5/10 [00:07<00:07,  1.46s/it]Profiling iterations:  60%|██████    | 6/10 [00:08<00:05,  1.46s/it]Profiling iterations:  70%|███████   | 7/10 [00:10<00:04,  1.46s/it]Profiling iterations:  80%|████████  | 8/10 [00:11<00:02,  1.46s/it]Profiling iterations:  90%|█████████ | 9/10 [00:13<00:01,  1.46s/it]Profiling iterations: 100%|██████████| 10/10 [00:14<00:00,  1.46s/it]Profiling iterations: 100%|██████████| 10/10 [00:14<00:00,  1.46s/it]
+Avg latency: 1.4635352552868426 seconds
+10% percentile latency: 1.4574356874451042 seconds
+25% percentile latency: 1.4580771774053574 seconds
+50% percentile latency: 1.4592788056470454 seconds
+75% percentile latency: 1.4645313620567322 seconds
+90% percentile latency: 1.472490268573165 seconds
+99% percentile latency: 1.4871031102538108 seconds
+Optim
+Batch-1 Input len-128 Output len-128
+INFO 12-18 13:04:55 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:04:55 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:04:55 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:04:55 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:04:56 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:05:00 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:05:00 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:05:00 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:05:00 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:05:00 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:05:00 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:05:00 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:05:16 [config.py:841] This model supports multiple tasks: {'reward', 'classify', 'generate', 'embed'}. Defaulting to 'generate'.
+INFO 12-18 13:05:16 [config.py:1472] Using max model len 32768
+INFO 12-18 13:05:16 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.
+WARNING 12-18 13:05:16 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:05:16 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:05:16 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:05:16 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 13:05:17 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 13:05:26 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:05:26 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:05:26 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:05:26 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:05:27 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:05:30 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 13:05:31 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:05:31 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:05:31 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:05:31 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:05:31 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:05:31 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:05:31 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:05:31 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 13:05:44 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:05:44 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:05:44 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:05:44 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:05:45 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:05:51 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 13:05:52 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.78it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.77it/s]
+
+INFO 12-18 13:05:53 [default_loader.py:272] Loading weights took 0.50 seconds
+INFO 12-18 13:05:55 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 13:06:03 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 13:06:03 [backends.py:519] Dynamo bytecode transform time: 7.18 s
+INFO 12-18 13:06:06 [backends.py:193] Compiling a graph for general shape takes 1.95 s
+INFO 12-18 13:06:13 [monitor.py:34] torch.compile takes 9.13 s in total
+INFO 12-18 13:06:14 [worker_v1.py:181] Available memory: 55640224460, total memory: 65464696832
+INFO 12-18 13:06:14 [kv_cache_utils.py:716] GPU KV cache size: 696,576 tokens
+INFO 12-18 13:06:14 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.26x
+INFO 12-18 13:07:25 [model_runner_v1.py:2074] Graph capturing finished in 71 secs, took 0.19 GiB
+INFO 12-18 13:07:25 [core.py:172] init engine (profile, create kv cache, warmup model) took 90.36 seconds
+WARNING 12-18 13:07:27 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 13:07:27 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:07:27 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:07:27 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:07:27 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:01<00:06,  1.66s/it]Warmup iterations:  40%|████      | 2/5 [00:03<00:04,  1.58s/it]Warmup iterations:  60%|██████    | 3/5 [00:04<00:03,  1.55s/it]Warmup iterations:  80%|████████  | 4/5 [00:06<00:01,  1.54s/it]Warmup iterations: 100%|██████████| 5/5 [00:07<00:00,  1.54s/it]Warmup iterations: 100%|██████████| 5/5 [00:07<00:00,  1.55s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:01<00:13,  1.53s/it]Profiling iterations:  20%|██        | 2/10 [00:03<00:12,  1.56s/it]Profiling iterations:  30%|███       | 3/10 [00:04<00:10,  1.56s/it]Profiling iterations:  40%|████      | 4/10 [00:06<00:09,  1.55s/it]Profiling iterations:  50%|█████     | 5/10 [00:07<00:07,  1.55s/it]Profiling iterations:  60%|██████    | 6/10 [00:09<00:06,  1.55s/it]Profiling iterations:  70%|███████   | 7/10 [00:10<00:04,  1.55s/it]Profiling iterations:  80%|████████  | 8/10 [00:12<00:03,  1.55s/it]Profiling iterations:  90%|█████████ | 9/10 [00:13<00:01,  1.55s/it]Profiling iterations: 100%|██████████| 10/10 [00:15<00:00,  1.55s/it]Profiling iterations: 100%|██████████| 10/10 [00:15<00:00,  1.55s/it]
+Avg latency: 1.5497543760575354 seconds
+10% percentile latency: 1.5430072070099414 seconds
+25% percentile latency: 1.5444035150576383 seconds
+50% percentile latency: 1.5467859930358827 seconds
+75% percentile latency: 1.5531284515745938 seconds
+90% percentile latency: 1.5640439540147781 seconds
+99% percentile latency: 1.5692634866572917 seconds
+Optim
+Batch-1 Input len-512 Output len-128
+INFO 12-18 13:08:07 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:08:07 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:08:07 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:08:07 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:08:09 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:08:12 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:08:13 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:08:13 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:08:13 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:08:13 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:08:13 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:08:13 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:08:29 [config.py:841] This model supports multiple tasks: {'embed', 'classify', 'reward', 'generate'}. Defaulting to 'generate'.
+INFO 12-18 13:08:29 [config.py:1472] Using max model len 32768
+INFO 12-18 13:08:29 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.
+WARNING 12-18 13:08:29 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:08:29 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:08:29 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:08:29 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 13:08:30 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 13:08:38 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:08:38 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:08:38 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:08:38 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:08:40 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:08:42 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 13:08:43 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:08:44 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:08:44 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:08:44 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:08:44 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:08:44 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:08:44 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:08:44 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 13:08:57 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:08:57 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:08:57 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:08:57 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:08:58 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:09:04 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 13:09:04 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.69it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.68it/s]
+
+INFO 12-18 13:09:06 [default_loader.py:272] Loading weights took 0.53 seconds
+INFO 12-18 13:09:08 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 13:09:16 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 13:09:16 [backends.py:519] Dynamo bytecode transform time: 7.29 s
+INFO 12-18 13:09:18 [backends.py:193] Compiling a graph for general shape takes 1.98 s
+INFO 12-18 13:09:26 [monitor.py:34] torch.compile takes 9.27 s in total
+INFO 12-18 13:09:27 [worker_v1.py:181] Available memory: 55639139020, total memory: 65464696832
+INFO 12-18 13:09:27 [kv_cache_utils.py:716] GPU KV cache size: 696,576 tokens
+INFO 12-18 13:09:27 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.26x
+INFO 12-18 13:10:43 [model_runner_v1.py:2074] Graph capturing finished in 76 secs, took 0.19 GiB
+INFO 12-18 13:10:43 [core.py:172] init engine (profile, create kv cache, warmup model) took 95.67 seconds
+WARNING 12-18 13:10:44 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 13:10:45 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:10:45 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:10:45 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:10:45 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:01<00:06,  1.67s/it]Warmup iterations:  40%|████      | 2/5 [00:03<00:04,  1.62s/it]Warmup iterations:  60%|██████    | 3/5 [00:04<00:03,  1.61s/it]Warmup iterations:  80%|████████  | 4/5 [00:06<00:01,  1.61s/it]Warmup iterations: 100%|██████████| 5/5 [00:08<00:00,  1.60s/it]Warmup iterations: 100%|██████████| 5/5 [00:08<00:00,  1.61s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:01<00:14,  1.60s/it]Profiling iterations:  20%|██        | 2/10 [00:03<00:12,  1.60s/it]Profiling iterations:  30%|███       | 3/10 [00:04<00:11,  1.60s/it]Profiling iterations:  40%|████      | 4/10 [00:06<00:09,  1.60s/it]Profiling iterations:  50%|█████     | 5/10 [00:07<00:07,  1.60s/it]Profiling iterations:  60%|██████    | 6/10 [00:09<00:06,  1.60s/it]Profiling iterations:  70%|███████   | 7/10 [00:11<00:04,  1.60s/it]Profiling iterations:  80%|████████  | 8/10 [00:12<00:03,  1.60s/it]Profiling iterations:  90%|█████████ | 9/10 [00:14<00:01,  1.60s/it]Profiling iterations: 100%|██████████| 10/10 [00:15<00:00,  1.60s/it]Profiling iterations: 100%|██████████| 10/10 [00:15<00:00,  1.60s/it]
+Avg latency: 1.5975988549180329 seconds
+10% percentile latency: 1.5960583346895874 seconds
+25% percentile latency: 1.5969200853724033 seconds
+50% percentile latency: 1.5979085243307054 seconds
+75% percentile latency: 1.5984531631693244 seconds
+90% percentile latency: 1.598651084303856 seconds
+99% percentile latency: 1.599007745012641 seconds
+Optim
+Batch-1 Input len-2048 Output len-128
+INFO 12-18 13:11:26 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:11:26 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:11:26 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:11:26 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:11:27 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:11:31 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:11:31 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:11:31 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:11:31 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:11:31 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:11:31 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:11:31 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:11:47 [config.py:841] This model supports multiple tasks: {'classify', 'generate', 'reward', 'embed'}. Defaulting to 'generate'.
+INFO 12-18 13:11:47 [config.py:1472] Using max model len 32768
+INFO 12-18 13:11:47 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.
+WARNING 12-18 13:11:47 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:11:47 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:11:47 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:11:47 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 13:11:49 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 13:11:57 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:11:57 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:11:57 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:11:57 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:11:58 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:12:01 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 13:12:02 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:12:02 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:12:02 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:12:02 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:12:02 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:12:02 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:12:02 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:12:02 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 13:12:15 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:12:15 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:12:15 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:12:15 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:12:16 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:12:23 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 13:12:23 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.39it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.38it/s]
+
+INFO 12-18 13:12:24 [default_loader.py:272] Loading weights took 0.58 seconds
+INFO 12-18 13:12:26 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 13:12:34 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 13:12:34 [backends.py:519] Dynamo bytecode transform time: 7.13 s
+INFO 12-18 13:12:37 [backends.py:193] Compiling a graph for general shape takes 1.96 s
+INFO 12-18 13:12:44 [monitor.py:34] torch.compile takes 9.10 s in total
+INFO 12-18 13:12:45 [worker_v1.py:181] Available memory: 55639474892, total memory: 65464696832
+INFO 12-18 13:12:45 [kv_cache_utils.py:716] GPU KV cache size: 696,576 tokens
+INFO 12-18 13:12:45 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.26x
+INFO 12-18 13:13:54 [model_runner_v1.py:2074] Graph capturing finished in 68 secs, took 0.19 GiB
+INFO 12-18 13:13:54 [core.py:172] init engine (profile, create kv cache, warmup model) took 87.72 seconds
+WARNING 12-18 13:13:55 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 13:13:55 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:13:55 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:13:55 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:13:55 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:01<00:06,  1.61s/it]Warmup iterations:  40%|████      | 2/5 [00:03<00:04,  1.58s/it]Warmup iterations:  60%|██████    | 3/5 [00:04<00:03,  1.58s/it]Warmup iterations:  80%|████████  | 4/5 [00:06<00:01,  1.58s/it]Warmup iterations: 100%|██████████| 5/5 [00:07<00:00,  1.58s/it]Warmup iterations: 100%|██████████| 5/5 [00:07<00:00,  1.58s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:01<00:14,  1.58s/it]Profiling iterations:  20%|██        | 2/10 [00:03<00:12,  1.58s/it]Profiling iterations:  30%|███       | 3/10 [00:04<00:11,  1.58s/it]Profiling iterations:  40%|████      | 4/10 [00:06<00:09,  1.59s/it]Profiling iterations:  50%|█████     | 5/10 [00:07<00:07,  1.59s/it]Profiling iterations:  60%|██████    | 6/10 [00:09<00:06,  1.60s/it]Profiling iterations:  70%|███████   | 7/10 [00:11<00:04,  1.60s/it]Profiling iterations:  80%|████████  | 8/10 [00:12<00:03,  1.61s/it]Profiling iterations:  90%|█████████ | 9/10 [00:14<00:01,  1.61s/it]Profiling iterations: 100%|██████████| 10/10 [00:16<00:00,  1.61s/it]Profiling iterations: 100%|██████████| 10/10 [00:16<00:00,  1.60s/it]
+Avg latency: 1.6006429352797569 seconds
+10% percentile latency: 1.5837217737920581 seconds
+25% percentile latency: 1.5855500714387745 seconds
+50% percentile latency: 1.6084471652284265 seconds
+75% percentile latency: 1.611581105273217 seconds
+90% percentile latency: 1.6140285144560038 seconds
+99% percentile latency: 1.6149285178724677 seconds
+Optim
+Batch-1 Input len-8192 Output len-128
+INFO 12-18 13:14:37 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:14:37 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:14:37 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:14:37 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:14:38 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:14:42 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:14:42 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:14:42 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:14:42 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:14:42 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:14:42 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:14:42 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:14:58 [config.py:841] This model supports multiple tasks: {'embed', 'reward', 'classify', 'generate'}. Defaulting to 'generate'.
+INFO 12-18 13:14:58 [config.py:1472] Using max model len 32768
+INFO 12-18 13:14:58 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.
+WARNING 12-18 13:14:58 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:14:58 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:14:58 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:14:58 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+WARNING 12-18 13:15:00 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 13:15:08 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:15:08 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:15:08 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:15:08 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:15:09 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:15:12 [core.py:526] Waiting for init message from front-end.
+INFO 12-18 13:15:13 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 13:15:13 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 13:15:13 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 13:15:13 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 13:15:13 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 13:15:13 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 13:15:13 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+INFO 12-18 13:15:13 [core.py:69] Initializing a V1 LLM engine (v0.9.2) with config: model='/opt/pangu/openPangu-Embedded-1B-V1.1', speculative_config=None, tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=npu, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/opt/pangu/openPangu-Embedded-1B-V1.1, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":["all"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.unified_ascend_attention_with_output"],"use_inductor":false,"compile_sizes":[],"inductor_compile_config":{},"inductor_passes":{},"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":512,"local_cache_dir":null}
+INFO 12-18 13:15:26 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 13:15:26 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 13:15:26 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 13:15:26 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 13:15:27 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 13:15:33 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 12-18 13:15:34 [model_runner_v1.py:1746] Starting to load model /opt/pangu/openPangu-Embedded-1B-V1.1...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.33it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.33it/s]
+
+INFO 12-18 13:15:35 [default_loader.py:272] Loading weights took 0.68 seconds
+INFO 12-18 13:15:36 [model_runner_v1.py:1778] Loading model weights took 2.1617 GB
+INFO 12-18 13:15:44 [backends.py:508] Using cache directory: /root/.cache/vllm/torch_compile_cache/866e4cb0f9/rank_0_0/backbone for vLLM's torch.compile
+INFO 12-18 13:15:44 [backends.py:519] Dynamo bytecode transform time: 6.74 s
+INFO 12-18 13:15:46 [backends.py:193] Compiling a graph for general shape takes 1.75 s
+INFO 12-18 13:15:54 [monitor.py:34] torch.compile takes 8.49 s in total
+INFO 12-18 13:15:54 [worker_v1.py:181] Available memory: 55638459084, total memory: 65464696832
+INFO 12-18 13:15:54 [kv_cache_utils.py:716] GPU KV cache size: 696,576 tokens
+INFO 12-18 13:15:54 [kv_cache_utils.py:720] Maximum concurrency for 32,768 tokens per request: 21.26x
+INFO 12-18 13:16:38 [model_runner_v1.py:2074] Graph capturing finished in 44 secs, took 0.19 GiB
+INFO 12-18 13:16:38 [core.py:172] init engine (profile, create kv cache, warmup model) took 61.62 seconds
+WARNING 12-18 13:16:39 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+WARNING 12-18 13:16:39 [ascend_config.py:168] ACL Graph is currently experimental. Please raise an issue on https://github.com/vllm-project/vllm-ascend/issues if you encourage any Error
+INFO 12-18 13:16:39 [platform.py:174] PIECEWISE compilation enabled on NPU. use_inductor not supported - using only ACL Graph mode
+INFO 12-18 13:16:39 [utils.py:321] Calculated maximum supported batch sizes for ACL graph: 71
+INFO 12-18 13:16:39 [utils.py:347] No adjustment needed for ACL graph batch sizes: PanguEmbeddedForCausalLM model (layers: 26) with 67 sizes
+Warming up...
+Warmup iterations:   0%|          | 0/5 [00:00<?, ?it/s]Warmup iterations:  20%|██        | 1/5 [00:01<00:06,  1.58s/it]Warmup iterations:  40%|████      | 2/5 [00:03<00:05,  1.71s/it]Warmup iterations:  60%|██████    | 3/5 [00:05<00:03,  1.74s/it]Warmup iterations:  80%|████████  | 4/5 [00:06<00:01,  1.74s/it]Warmup iterations: 100%|██████████| 5/5 [00:08<00:00,  1.74s/it]Warmup iterations: 100%|██████████| 5/5 [00:08<00:00,  1.73s/it]
+Profiling iterations:   0%|          | 0/10 [00:00<?, ?it/s]Profiling iterations:  10%|█         | 1/10 [00:01<00:15,  1.72s/it]Profiling iterations:  20%|██        | 2/10 [00:03<00:13,  1.70s/it]Profiling iterations:  30%|███       | 3/10 [00:05<00:11,  1.69s/it]Profiling iterations:  40%|████      | 4/10 [00:06<00:10,  1.68s/it]Profiling iterations:  50%|█████     | 5/10 [00:08<00:08,  1.68s/it]Profiling iterations:  60%|██████    | 6/10 [00:10<00:06,  1.67s/it]Profiling iterations:  70%|███████   | 7/10 [00:11<00:04,  1.66s/it]Profiling iterations:  80%|████████  | 8/10 [00:13<00:03,  1.66s/it]Profiling iterations:  90%|█████████ | 9/10 [00:15<00:01,  1.65s/it]Profiling iterations: 100%|██████████| 10/10 [00:16<00:00,  1.64s/it]Profiling iterations: 100%|██████████| 10/10 [00:16<00:00,  1.66s/it]
+Avg latency: 1.6637578839436173 seconds
+10% percentile latency: 1.6375208122655749 seconds
+25% percentile latency: 1.6449698451906443 seconds
+50% percentile latency: 1.657008851878345 seconds
+75% percentile latency: 1.6775802676565945 seconds
+90% percentile latency: 1.6936956789344548 seconds
+99% percentile latency: 1.716881647016853 seconds

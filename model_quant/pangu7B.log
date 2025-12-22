@@ -1,0 +1,693 @@
+/root/miniconda3/envs/pangu/lib/python3.11/site-packages/torch_npu/contrib/transfer_to_npu.py:300: ImportWarning: 
+    *************************************************************************************************************
+    The torch.Tensor.cuda and torch.nn.Module.cuda are replaced with torch.Tensor.npu and torch.nn.Module.npu now..
+    The torch.cuda.DoubleTensor is replaced with torch.npu.FloatTensor cause the double type is not supported now..
+    The backend in torch.distributed.init_process_group set to hccl now..
+    The torch.cuda.* and torch.cuda.amp.* are replaced with torch.npu.* and torch.npu.amp.* now..
+    The device parameters have been replaced with npu in the function below:
+    torch.logspace, torch.randint, torch.hann_window, torch.rand, torch.full_like, torch.ones_like, torch.rand_like, torch.randperm, torch.arange, torch.frombuffer, torch.normal, torch._empty_per_channel_affine_quantized, torch.empty_strided, torch.empty_like, torch.scalar_tensor, torch.tril_indices, torch.bartlett_window, torch.ones, torch.sparse_coo_tensor, torch.randn, torch.kaiser_window, torch.tensor, torch.triu_indices, torch.as_tensor, torch.zeros, torch.randint_like, torch.full, torch.eye, torch._sparse_csr_tensor_unsafe, torch.empty, torch._sparse_coo_tensor_unsafe, torch.blackman_window, torch.zeros_like, torch.range, torch.sparse_csr_tensor, torch.randn_like, torch.from_file, torch._cudnn_init_dropout_state, torch._empty_affine_quantized, torch.linspace, torch.hamming_window, torch.empty_quantized, torch._pin_memory, torch.autocast, torch.load, torch.set_default_device, torch.Tensor.new_empty, torch.Tensor.new_empty_strided, torch.Tensor.new_full, torch.Tensor.new_ones, torch.Tensor.new_tensor, torch.Tensor.new_zeros, torch.Tensor.to, torch.Tensor.pin_memory, torch.nn.Module.to, torch.nn.Module.to_empty
+    *************************************************************************************************************
+    
+  warnings.warn(msg, ImportWarning)
+/root/miniconda3/envs/pangu/lib/python3.11/site-packages/torch_npu/contrib/transfer_to_npu.py:255: RuntimeWarning: torch.jit.script and torch.jit.script_method will be disabled by transfer_to_npu, which currently does not support them, if you need to enable them, please do not use transfer_to_npu.
+  warnings.warn(msg, RuntimeWarning)
+2025-12-13 09:32:52,524 - msmodelslim - WARNING - The current CANN version does not support recall_window method.
+2025-12-13 09:32:52,545 - msmodelslim - INFO - write directory exists, write file to directory '/run/models/openPangu-7B-a8w8'
+[INFO] torch_npu detected. Using NPU fused infer attention.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.01s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.03it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.32it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.17it/s]
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:241: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+2025-12-13 09:33:07,415 - msmodelslim - INFO - Automatically disabling the last linear layer: lm_head based on the `disable_last_linear` parameter setting.
+feature process:   0%|          | 0/5 [00:00<?, ?it/s]feature process:  20%|██        | 1/5 [00:02<00:09,  2.27s/it]feature process:  40%|████      | 2/5 [00:02<00:03,  1.15s/it]feature process:  60%|██████    | 3/5 [00:02<00:01,  1.28it/s]feature process:  80%|████████  | 4/5 [00:03<00:00,  1.66it/s]feature process: 100%|██████████| 5/5 [00:03<00:00,  1.98it/s]feature process: 100%|██████████| 5/5 [00:03<00:00,  1.37it/s]
+2025-12-13 09:33:11,147 - msmodelslim - WARNING - 'features.npy' already exist. The original file will be overwritten.
+2025-12-13 09:33:11,552 - msmodelslim - INFO - The model contains a total of 239 nn.Linear layers.
+2025-12-13 09:33:11,552 - msmodelslim - INFO - The subsequent layers will maintain the use of floating-point weights for forward computations.:  lm_head  model.layers.0.mlp.down_proj  model.layers.1.mlp.down_proj  model.layers.10.mlp.down_proj  model.layers.11.mlp.down_proj  model.layers.12.mlp.down_proj  model.layers.13.mlp.down_proj  model.layers.14.mlp.down_proj  model.layers.15.mlp.down_proj  model.layers.16.mlp.down_proj  model.layers.17.mlp.down_proj  model.layers.18.mlp.down_proj  model.layers.19.mlp.down_proj  model.layers.2.mlp.down_proj  model.layers.20.mlp.down_proj  model.layers.21.mlp.down_proj  model.layers.22.mlp.down_proj  model.layers.23.mlp.down_proj  model.layers.24.mlp.down_proj  model.layers.25.mlp.down_proj  model.layers.26.mlp.down_proj  model.layers.27.mlp.down_proj  model.layers.28.mlp.down_proj  model.layers.29.mlp.down_proj  model.layers.3.mlp.down_proj  model.layers.30.mlp.down_proj  model.layers.31.mlp.down_proj  model.layers.32.mlp.down_proj  model.layers.33.mlp.down_proj  model.layers.4.mlp.down_proj  model.layers.5.mlp.down_proj  model.layers.6.mlp.down_proj  model.layers.7.mlp.down_proj  model.layers.8.mlp.down_proj  model.layers.9.mlp.down_proj
+2025-12-13 09:33:11,554 - msmodelslim - INFO - layer model.layers.0.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,554 - msmodelslim - INFO - layer model.layers.0.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.0.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.0.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.0.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.0.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.0.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.1.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.2.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.2.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.2.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,555 - msmodelslim - INFO - layer model.layers.2.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.2.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.2.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.2.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.3.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.4.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,556 - msmodelslim - INFO - layer model.layers.5.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.5.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.5.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.5.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.5.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.5.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.5.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.6.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.7.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.7.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.7.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.7.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.7.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,557 - msmodelslim - INFO - layer model.layers.7.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.7.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.8.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.9.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.10.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.10.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,558 - msmodelslim - INFO - layer model.layers.10.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.10.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.10.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.10.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.10.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.11.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.12.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,559 - msmodelslim - INFO - layer model.layers.13.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.13.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.13.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.13.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.13.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.13.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.13.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.14.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.15.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.15.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.15.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.15.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.15.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,560 - msmodelslim - INFO - layer model.layers.15.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.15.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.16.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.17.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.18.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.18.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.18.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,561 - msmodelslim - INFO - layer model.layers.18.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.18.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.18.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.18.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.19.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.20.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.21.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,562 - msmodelslim - INFO - layer model.layers.21.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.21.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.21.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.21.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.21.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.21.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.22.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.23.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.23.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.23.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.23.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.23.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,563 - msmodelslim - INFO - layer model.layers.23.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.23.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.24.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.25.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.26.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.26.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.26.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,564 - msmodelslim - INFO - layer model.layers.26.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.26.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.26.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.26.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.27.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.28.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.29.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.29.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,565 - msmodelslim - INFO - layer model.layers.29.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.29.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.29.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.29.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.29.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.30.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,566 - msmodelslim - INFO - layer model.layers.31.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.32.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.self_attn.q_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.self_attn.k_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.self_attn.v_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.self_attn.o_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.mlp.gate_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.mlp.up_proj not match any rule, will use QuantType.W8A8
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer model.layers.33.mlp.down_proj was rolled back with QuantType.FLOAT
+2025-12-13 09:33:11,567 - msmodelslim - INFO - layer lm_head was rolled back with QuantType.FLOAT
+2025-12-13 09:33:12,460 - msmodelslim - INFO - use min-max observer:'model.layers.0.self_attn.q_proj.quant_input', range_parm:tensor(41.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,463 - msmodelslim - INFO - use min-max observer:'model.layers.0.self_attn.k_proj.quant_input', range_parm:tensor(41.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,464 - msmodelslim - INFO - use min-max observer:'model.layers.0.self_attn.v_proj.quant_input', range_parm:tensor(41.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,465 - msmodelslim - INFO - use min-max observer:'model.layers.0.self_attn.o_proj.quant_input', range_parm:tensor(11.4375, dtype=torch.bfloat16)
+2025-12-13 09:33:12,465 - msmodelslim - INFO - use min-max observer:'model.layers.0.mlp.gate_proj.quant_input', range_parm:tensor(49.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,466 - msmodelslim - INFO - use min-max observer:'model.layers.0.mlp.up_proj.quant_input', range_parm:tensor(49.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,467 - msmodelslim - INFO - use min-max observer:'model.layers.1.self_attn.q_proj.quant_input', range_parm:tensor(37.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,468 - msmodelslim - INFO - use min-max observer:'model.layers.1.self_attn.k_proj.quant_input', range_parm:tensor(37.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,469 - msmodelslim - INFO - use min-max observer:'model.layers.1.self_attn.v_proj.quant_input', range_parm:tensor(37.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,469 - msmodelslim - INFO - use min-max observer:'model.layers.1.self_attn.o_proj.quant_input', range_parm:tensor(8.6250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,470 - msmodelslim - INFO - use min-max observer:'model.layers.1.mlp.gate_proj.quant_input', range_parm:tensor(51., dtype=torch.bfloat16)
+2025-12-13 09:33:12,471 - msmodelslim - INFO - use min-max observer:'model.layers.1.mlp.up_proj.quant_input', range_parm:tensor(51., dtype=torch.bfloat16)
+2025-12-13 09:33:12,472 - msmodelslim - INFO - use min-max observer:'model.layers.2.self_attn.q_proj.quant_input', range_parm:tensor(52.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,472 - msmodelslim - INFO - use min-max observer:'model.layers.2.self_attn.k_proj.quant_input', range_parm:tensor(52.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,473 - msmodelslim - INFO - use min-max observer:'model.layers.2.self_attn.v_proj.quant_input', range_parm:tensor(52.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,474 - msmodelslim - INFO - use min-max observer:'model.layers.2.self_attn.o_proj.quant_input', range_parm:tensor(11.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,475 - msmodelslim - INFO - use min-max observer:'model.layers.2.mlp.gate_proj.quant_input', range_parm:tensor(25.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,475 - msmodelslim - INFO - use min-max observer:'model.layers.2.mlp.up_proj.quant_input', range_parm:tensor(25.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,476 - msmodelslim - INFO - use min-max observer:'model.layers.3.self_attn.q_proj.quant_input', range_parm:tensor(54.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,477 - msmodelslim - INFO - use min-max observer:'model.layers.3.self_attn.k_proj.quant_input', range_parm:tensor(54.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,478 - msmodelslim - INFO - use min-max observer:'model.layers.3.self_attn.v_proj.quant_input', range_parm:tensor(54.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,478 - msmodelslim - INFO - use min-max observer:'model.layers.3.self_attn.o_proj.quant_input', range_parm:tensor(12.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,479 - msmodelslim - INFO - use min-max observer:'model.layers.3.mlp.gate_proj.quant_input', range_parm:tensor(25.6250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,480 - msmodelslim - INFO - use min-max observer:'model.layers.3.mlp.up_proj.quant_input', range_parm:tensor(25.6250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,481 - msmodelslim - INFO - use min-max observer:'model.layers.4.self_attn.q_proj.quant_input', range_parm:tensor(61.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,481 - msmodelslim - INFO - use min-max observer:'model.layers.4.self_attn.k_proj.quant_input', range_parm:tensor(61.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,482 - msmodelslim - INFO - use min-max observer:'model.layers.4.self_attn.v_proj.quant_input', range_parm:tensor(61.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,483 - msmodelslim - INFO - use min-max observer:'model.layers.4.self_attn.o_proj.quant_input', range_parm:tensor(10.1250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,484 - msmodelslim - INFO - use min-max observer:'model.layers.4.mlp.gate_proj.quant_input', range_parm:tensor(28.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,484 - msmodelslim - INFO - use min-max observer:'model.layers.4.mlp.up_proj.quant_input', range_parm:tensor(28.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,485 - msmodelslim - INFO - use min-max observer:'model.layers.5.self_attn.q_proj.quant_input', range_parm:tensor(66.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,486 - msmodelslim - INFO - use min-max observer:'model.layers.5.self_attn.k_proj.quant_input', range_parm:tensor(66.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,487 - msmodelslim - INFO - use min-max observer:'model.layers.5.self_attn.v_proj.quant_input', range_parm:tensor(66.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,487 - msmodelslim - INFO - use min-max observer:'model.layers.5.self_attn.o_proj.quant_input', range_parm:tensor(10.0625, dtype=torch.bfloat16)
+2025-12-13 09:33:12,488 - msmodelslim - INFO - use min-max observer:'model.layers.5.mlp.gate_proj.quant_input', range_parm:tensor(31.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,489 - msmodelslim - INFO - use min-max observer:'model.layers.5.mlp.up_proj.quant_input', range_parm:tensor(31.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,489 - msmodelslim - INFO - use min-max observer:'model.layers.6.self_attn.q_proj.quant_input', range_parm:tensor(53.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,490 - msmodelslim - INFO - use min-max observer:'model.layers.6.self_attn.k_proj.quant_input', range_parm:tensor(53.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,491 - msmodelslim - INFO - use min-max observer:'model.layers.6.self_attn.v_proj.quant_input', range_parm:tensor(53.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,492 - msmodelslim - INFO - use min-max observer:'model.layers.6.self_attn.o_proj.quant_input', range_parm:tensor(12., dtype=torch.bfloat16)
+2025-12-13 09:33:12,492 - msmodelslim - INFO - use min-max observer:'model.layers.6.mlp.gate_proj.quant_input', range_parm:tensor(35., dtype=torch.bfloat16)
+2025-12-13 09:33:12,493 - msmodelslim - INFO - use min-max observer:'model.layers.6.mlp.up_proj.quant_input', range_parm:tensor(35., dtype=torch.bfloat16)
+2025-12-13 09:33:12,494 - msmodelslim - INFO - use min-max observer:'model.layers.7.self_attn.q_proj.quant_input', range_parm:tensor(51.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,495 - msmodelslim - INFO - use min-max observer:'model.layers.7.self_attn.k_proj.quant_input', range_parm:tensor(51.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,495 - msmodelslim - INFO - use min-max observer:'model.layers.7.self_attn.v_proj.quant_input', range_parm:tensor(51.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,496 - msmodelslim - INFO - use min-max observer:'model.layers.7.self_attn.o_proj.quant_input', range_parm:tensor(9.5625, dtype=torch.bfloat16)
+2025-12-13 09:33:12,497 - msmodelslim - INFO - use min-max observer:'model.layers.7.mlp.gate_proj.quant_input', range_parm:tensor(54.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,498 - msmodelslim - INFO - use min-max observer:'model.layers.7.mlp.up_proj.quant_input', range_parm:tensor(54.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,498 - msmodelslim - INFO - use min-max observer:'model.layers.8.self_attn.q_proj.quant_input', range_parm:tensor(58.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,499 - msmodelslim - INFO - use min-max observer:'model.layers.8.self_attn.k_proj.quant_input', range_parm:tensor(58.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,500 - msmodelslim - INFO - use min-max observer:'model.layers.8.self_attn.v_proj.quant_input', range_parm:tensor(58.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,501 - msmodelslim - INFO - use min-max observer:'model.layers.8.self_attn.o_proj.quant_input', range_parm:tensor(13.9375, dtype=torch.bfloat16)
+2025-12-13 09:33:12,501 - msmodelslim - INFO - use min-max observer:'model.layers.8.mlp.gate_proj.quant_input', range_parm:tensor(66.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,502 - msmodelslim - INFO - use min-max observer:'model.layers.8.mlp.up_proj.quant_input', range_parm:tensor(66.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,503 - msmodelslim - INFO - use min-max observer:'model.layers.9.self_attn.q_proj.quant_input', range_parm:tensor(43.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,504 - msmodelslim - INFO - use min-max observer:'model.layers.9.self_attn.k_proj.quant_input', range_parm:tensor(43.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,504 - msmodelslim - INFO - use min-max observer:'model.layers.9.self_attn.v_proj.quant_input', range_parm:tensor(43.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,505 - msmodelslim - INFO - use min-max observer:'model.layers.9.self_attn.o_proj.quant_input', range_parm:tensor(8.0625, dtype=torch.bfloat16)
+2025-12-13 09:33:12,506 - msmodelslim - INFO - use min-max observer:'model.layers.9.mlp.gate_proj.quant_input', range_parm:tensor(40.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,507 - msmodelslim - INFO - use min-max observer:'model.layers.9.mlp.up_proj.quant_input', range_parm:tensor(40.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,507 - msmodelslim - INFO - use min-max observer:'model.layers.10.self_attn.q_proj.quant_input', range_parm:tensor(38.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,508 - msmodelslim - INFO - use min-max observer:'model.layers.10.self_attn.k_proj.quant_input', range_parm:tensor(38.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,509 - msmodelslim - INFO - use min-max observer:'model.layers.10.self_attn.v_proj.quant_input', range_parm:tensor(38.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,510 - msmodelslim - INFO - use min-max observer:'model.layers.10.self_attn.o_proj.quant_input', range_parm:tensor(10.1250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,510 - msmodelslim - INFO - use min-max observer:'model.layers.10.mlp.gate_proj.quant_input', range_parm:tensor(40.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,511 - msmodelslim - INFO - use min-max observer:'model.layers.10.mlp.up_proj.quant_input', range_parm:tensor(40.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,512 - msmodelslim - INFO - use min-max observer:'model.layers.11.self_attn.q_proj.quant_input', range_parm:tensor(39.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,513 - msmodelslim - INFO - use min-max observer:'model.layers.11.self_attn.k_proj.quant_input', range_parm:tensor(39.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,513 - msmodelslim - INFO - use min-max observer:'model.layers.11.self_attn.v_proj.quant_input', range_parm:tensor(39.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,514 - msmodelslim - INFO - use min-max observer:'model.layers.11.self_attn.o_proj.quant_input', range_parm:tensor(10.6250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,515 - msmodelslim - INFO - use min-max observer:'model.layers.11.mlp.gate_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,515 - msmodelslim - INFO - use min-max observer:'model.layers.11.mlp.up_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,516 - msmodelslim - INFO - use min-max observer:'model.layers.12.self_attn.q_proj.quant_input', range_parm:tensor(37.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,517 - msmodelslim - INFO - use min-max observer:'model.layers.12.self_attn.k_proj.quant_input', range_parm:tensor(37.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,518 - msmodelslim - INFO - use min-max observer:'model.layers.12.self_attn.v_proj.quant_input', range_parm:tensor(37.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,518 - msmodelslim - INFO - use min-max observer:'model.layers.12.self_attn.o_proj.quant_input', range_parm:tensor(9.4375, dtype=torch.bfloat16)
+2025-12-13 09:33:12,519 - msmodelslim - INFO - use min-max observer:'model.layers.12.mlp.gate_proj.quant_input', range_parm:tensor(37.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,520 - msmodelslim - INFO - use min-max observer:'model.layers.12.mlp.up_proj.quant_input', range_parm:tensor(37.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,521 - msmodelslim - INFO - use min-max observer:'model.layers.13.self_attn.q_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,522 - msmodelslim - INFO - use min-max observer:'model.layers.13.self_attn.k_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,522 - msmodelslim - INFO - use min-max observer:'model.layers.13.self_attn.v_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,523 - msmodelslim - INFO - use min-max observer:'model.layers.13.self_attn.o_proj.quant_input', range_parm:tensor(9.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,524 - msmodelslim - INFO - use min-max observer:'model.layers.13.mlp.gate_proj.quant_input', range_parm:tensor(35.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,525 - msmodelslim - INFO - use min-max observer:'model.layers.13.mlp.up_proj.quant_input', range_parm:tensor(35.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,525 - msmodelslim - INFO - use min-max observer:'model.layers.14.self_attn.q_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,526 - msmodelslim - INFO - use min-max observer:'model.layers.14.self_attn.k_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,527 - msmodelslim - INFO - use min-max observer:'model.layers.14.self_attn.v_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,528 - msmodelslim - INFO - use min-max observer:'model.layers.14.self_attn.o_proj.quant_input', range_parm:tensor(8.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,528 - msmodelslim - INFO - use min-max observer:'model.layers.14.mlp.gate_proj.quant_input', range_parm:tensor(35.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,529 - msmodelslim - INFO - use min-max observer:'model.layers.14.mlp.up_proj.quant_input', range_parm:tensor(35.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,530 - msmodelslim - INFO - use min-max observer:'model.layers.15.self_attn.q_proj.quant_input', range_parm:tensor(39.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,531 - msmodelslim - INFO - use min-max observer:'model.layers.15.self_attn.k_proj.quant_input', range_parm:tensor(39.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,531 - msmodelslim - INFO - use min-max observer:'model.layers.15.self_attn.v_proj.quant_input', range_parm:tensor(39.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,532 - msmodelslim - INFO - use min-max observer:'model.layers.15.self_attn.o_proj.quant_input', range_parm:tensor(10., dtype=torch.bfloat16)
+2025-12-13 09:33:12,533 - msmodelslim - INFO - use min-max observer:'model.layers.15.mlp.gate_proj.quant_input', range_parm:tensor(33., dtype=torch.bfloat16)
+2025-12-13 09:33:12,533 - msmodelslim - INFO - use min-max observer:'model.layers.15.mlp.up_proj.quant_input', range_parm:tensor(33., dtype=torch.bfloat16)
+2025-12-13 09:33:12,534 - msmodelslim - INFO - use min-max observer:'model.layers.16.self_attn.q_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,535 - msmodelslim - INFO - use min-max observer:'model.layers.16.self_attn.k_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,536 - msmodelslim - INFO - use min-max observer:'model.layers.16.self_attn.v_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,536 - msmodelslim - INFO - use min-max observer:'model.layers.16.self_attn.o_proj.quant_input', range_parm:tensor(10.4375, dtype=torch.bfloat16)
+2025-12-13 09:33:12,537 - msmodelslim - INFO - use min-max observer:'model.layers.16.mlp.gate_proj.quant_input', range_parm:tensor(31.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,538 - msmodelslim - INFO - use min-max observer:'model.layers.16.mlp.up_proj.quant_input', range_parm:tensor(31.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,539 - msmodelslim - INFO - use min-max observer:'model.layers.17.self_attn.q_proj.quant_input', range_parm:tensor(35.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,539 - msmodelslim - INFO - use min-max observer:'model.layers.17.self_attn.k_proj.quant_input', range_parm:tensor(35.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,540 - msmodelslim - INFO - use min-max observer:'model.layers.17.self_attn.v_proj.quant_input', range_parm:tensor(35.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,541 - msmodelslim - INFO - use min-max observer:'model.layers.17.self_attn.o_proj.quant_input', range_parm:tensor(8.3125, dtype=torch.bfloat16)
+2025-12-13 09:33:12,541 - msmodelslim - INFO - use min-max observer:'model.layers.17.mlp.gate_proj.quant_input', range_parm:tensor(29.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,542 - msmodelslim - INFO - use min-max observer:'model.layers.17.mlp.up_proj.quant_input', range_parm:tensor(29.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,543 - msmodelslim - INFO - use min-max observer:'model.layers.18.self_attn.q_proj.quant_input', range_parm:tensor(39.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,544 - msmodelslim - INFO - use min-max observer:'model.layers.18.self_attn.k_proj.quant_input', range_parm:tensor(39.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,544 - msmodelslim - INFO - use min-max observer:'model.layers.18.self_attn.v_proj.quant_input', range_parm:tensor(39.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,545 - msmodelslim - INFO - use min-max observer:'model.layers.18.self_attn.o_proj.quant_input', range_parm:tensor(6.7812, dtype=torch.bfloat16)
+2025-12-13 09:33:12,546 - msmodelslim - INFO - use min-max observer:'model.layers.18.mlp.gate_proj.quant_input', range_parm:tensor(29.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,547 - msmodelslim - INFO - use min-max observer:'model.layers.18.mlp.up_proj.quant_input', range_parm:tensor(29.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,547 - msmodelslim - INFO - use min-max observer:'model.layers.19.self_attn.q_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,548 - msmodelslim - INFO - use min-max observer:'model.layers.19.self_attn.k_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,549 - msmodelslim - INFO - use min-max observer:'model.layers.19.self_attn.v_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,550 - msmodelslim - INFO - use min-max observer:'model.layers.19.self_attn.o_proj.quant_input', range_parm:tensor(10.1875, dtype=torch.bfloat16)
+2025-12-13 09:33:12,550 - msmodelslim - INFO - use min-max observer:'model.layers.19.mlp.gate_proj.quant_input', range_parm:tensor(30., dtype=torch.bfloat16)
+2025-12-13 09:33:12,551 - msmodelslim - INFO - use min-max observer:'model.layers.19.mlp.up_proj.quant_input', range_parm:tensor(30., dtype=torch.bfloat16)
+2025-12-13 09:33:12,552 - msmodelslim - INFO - use min-max observer:'model.layers.20.self_attn.q_proj.quant_input', range_parm:tensor(41.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,552 - msmodelslim - INFO - use min-max observer:'model.layers.20.self_attn.k_proj.quant_input', range_parm:tensor(41.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,553 - msmodelslim - INFO - use min-max observer:'model.layers.20.self_attn.v_proj.quant_input', range_parm:tensor(41.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,554 - msmodelslim - INFO - use min-max observer:'model.layers.20.self_attn.o_proj.quant_input', range_parm:tensor(6.2812, dtype=torch.bfloat16)
+2025-12-13 09:33:12,555 - msmodelslim - INFO - use min-max observer:'model.layers.20.mlp.gate_proj.quant_input', range_parm:tensor(32.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,555 - msmodelslim - INFO - use min-max observer:'model.layers.20.mlp.up_proj.quant_input', range_parm:tensor(32.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,556 - msmodelslim - INFO - use min-max observer:'model.layers.21.self_attn.q_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,557 - msmodelslim - INFO - use min-max observer:'model.layers.21.self_attn.k_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,558 - msmodelslim - INFO - use min-max observer:'model.layers.21.self_attn.v_proj.quant_input', range_parm:tensor(38., dtype=torch.bfloat16)
+2025-12-13 09:33:12,558 - msmodelslim - INFO - use min-max observer:'model.layers.21.self_attn.o_proj.quant_input', range_parm:tensor(7.0312, dtype=torch.bfloat16)
+2025-12-13 09:33:12,559 - msmodelslim - INFO - use min-max observer:'model.layers.21.mlp.gate_proj.quant_input', range_parm:tensor(31.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,560 - msmodelslim - INFO - use min-max observer:'model.layers.21.mlp.up_proj.quant_input', range_parm:tensor(31.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,561 - msmodelslim - INFO - use min-max observer:'model.layers.22.self_attn.q_proj.quant_input', range_parm:tensor(42.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,561 - msmodelslim - INFO - use min-max observer:'model.layers.22.self_attn.k_proj.quant_input', range_parm:tensor(42.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,562 - msmodelslim - INFO - use min-max observer:'model.layers.22.self_attn.v_proj.quant_input', range_parm:tensor(42.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,563 - msmodelslim - INFO - use min-max observer:'model.layers.22.self_attn.o_proj.quant_input', range_parm:tensor(7.0625, dtype=torch.bfloat16)
+2025-12-13 09:33:12,564 - msmodelslim - INFO - use min-max observer:'model.layers.22.mlp.gate_proj.quant_input', range_parm:tensor(31.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,564 - msmodelslim - INFO - use min-max observer:'model.layers.22.mlp.up_proj.quant_input', range_parm:tensor(31.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,565 - msmodelslim - INFO - use min-max observer:'model.layers.23.self_attn.q_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,566 - msmodelslim - INFO - use min-max observer:'model.layers.23.self_attn.k_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,566 - msmodelslim - INFO - use min-max observer:'model.layers.23.self_attn.v_proj.quant_input', range_parm:tensor(38.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,567 - msmodelslim - INFO - use min-max observer:'model.layers.23.self_attn.o_proj.quant_input', range_parm:tensor(8.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,568 - msmodelslim - INFO - use min-max observer:'model.layers.23.mlp.gate_proj.quant_input', range_parm:tensor(30., dtype=torch.bfloat16)
+2025-12-13 09:33:12,569 - msmodelslim - INFO - use min-max observer:'model.layers.23.mlp.up_proj.quant_input', range_parm:tensor(30., dtype=torch.bfloat16)
+2025-12-13 09:33:12,569 - msmodelslim - INFO - use min-max observer:'model.layers.24.self_attn.q_proj.quant_input', range_parm:tensor(41.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,570 - msmodelslim - INFO - use min-max observer:'model.layers.24.self_attn.k_proj.quant_input', range_parm:tensor(41.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,571 - msmodelslim - INFO - use min-max observer:'model.layers.24.self_attn.v_proj.quant_input', range_parm:tensor(41.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,572 - msmodelslim - INFO - use min-max observer:'model.layers.24.self_attn.o_proj.quant_input', range_parm:tensor(8.0625, dtype=torch.bfloat16)
+2025-12-13 09:33:12,572 - msmodelslim - INFO - use min-max observer:'model.layers.24.mlp.gate_proj.quant_input', range_parm:tensor(28.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,573 - msmodelslim - INFO - use min-max observer:'model.layers.24.mlp.up_proj.quant_input', range_parm:tensor(28.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,574 - msmodelslim - INFO - use min-max observer:'model.layers.25.self_attn.q_proj.quant_input', range_parm:tensor(37.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,574 - msmodelslim - INFO - use min-max observer:'model.layers.25.self_attn.k_proj.quant_input', range_parm:tensor(37.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,575 - msmodelslim - INFO - use min-max observer:'model.layers.25.self_attn.v_proj.quant_input', range_parm:tensor(37.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,576 - msmodelslim - INFO - use min-max observer:'model.layers.25.self_attn.o_proj.quant_input', range_parm:tensor(6.6250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,577 - msmodelslim - INFO - use min-max observer:'model.layers.25.mlp.gate_proj.quant_input', range_parm:tensor(27.1250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,577 - msmodelslim - INFO - use min-max observer:'model.layers.25.mlp.up_proj.quant_input', range_parm:tensor(27.1250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,578 - msmodelslim - INFO - use min-max observer:'model.layers.26.self_attn.q_proj.quant_input', range_parm:tensor(40.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,579 - msmodelslim - INFO - use min-max observer:'model.layers.26.self_attn.k_proj.quant_input', range_parm:tensor(40.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,580 - msmodelslim - INFO - use min-max observer:'model.layers.26.self_attn.v_proj.quant_input', range_parm:tensor(40.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,580 - msmodelslim - INFO - use min-max observer:'model.layers.26.self_attn.o_proj.quant_input', range_parm:tensor(7.9375, dtype=torch.bfloat16)
+2025-12-13 09:33:12,581 - msmodelslim - INFO - use min-max observer:'model.layers.26.mlp.gate_proj.quant_input', range_parm:tensor(25.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,582 - msmodelslim - INFO - use min-max observer:'model.layers.26.mlp.up_proj.quant_input', range_parm:tensor(25.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,583 - msmodelslim - INFO - use min-max observer:'model.layers.27.self_attn.q_proj.quant_input', range_parm:tensor(34.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,583 - msmodelslim - INFO - use min-max observer:'model.layers.27.self_attn.k_proj.quant_input', range_parm:tensor(34.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,584 - msmodelslim - INFO - use min-max observer:'model.layers.27.self_attn.v_proj.quant_input', range_parm:tensor(34.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,585 - msmodelslim - INFO - use min-max observer:'model.layers.27.self_attn.o_proj.quant_input', range_parm:tensor(6.3125, dtype=torch.bfloat16)
+2025-12-13 09:33:12,585 - msmodelslim - INFO - use min-max observer:'model.layers.27.mlp.gate_proj.quant_input', range_parm:tensor(26.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,586 - msmodelslim - INFO - use min-max observer:'model.layers.27.mlp.up_proj.quant_input', range_parm:tensor(26.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,587 - msmodelslim - INFO - use min-max observer:'model.layers.28.self_attn.q_proj.quant_input', range_parm:tensor(33.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,588 - msmodelslim - INFO - use min-max observer:'model.layers.28.self_attn.k_proj.quant_input', range_parm:tensor(33.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,588 - msmodelslim - INFO - use min-max observer:'model.layers.28.self_attn.v_proj.quant_input', range_parm:tensor(33.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,589 - msmodelslim - INFO - use min-max observer:'model.layers.28.self_attn.o_proj.quant_input', range_parm:tensor(8.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,590 - msmodelslim - INFO - use min-max observer:'model.layers.28.mlp.gate_proj.quant_input', range_parm:tensor(25.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,591 - msmodelslim - INFO - use min-max observer:'model.layers.28.mlp.up_proj.quant_input', range_parm:tensor(25.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,591 - msmodelslim - INFO - use min-max observer:'model.layers.29.self_attn.q_proj.quant_input', range_parm:tensor(32., dtype=torch.bfloat16)
+2025-12-13 09:33:12,592 - msmodelslim - INFO - use min-max observer:'model.layers.29.self_attn.k_proj.quant_input', range_parm:tensor(32., dtype=torch.bfloat16)
+2025-12-13 09:33:12,593 - msmodelslim - INFO - use min-max observer:'model.layers.29.self_attn.v_proj.quant_input', range_parm:tensor(32., dtype=torch.bfloat16)
+2025-12-13 09:33:12,593 - msmodelslim - INFO - use min-max observer:'model.layers.29.self_attn.o_proj.quant_input', range_parm:tensor(6.8125, dtype=torch.bfloat16)
+2025-12-13 09:33:12,594 - msmodelslim - INFO - use min-max observer:'model.layers.29.mlp.gate_proj.quant_input', range_parm:tensor(25.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,595 - msmodelslim - INFO - use min-max observer:'model.layers.29.mlp.up_proj.quant_input', range_parm:tensor(25.8750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,596 - msmodelslim - INFO - use min-max observer:'model.layers.30.self_attn.q_proj.quant_input', range_parm:tensor(30.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,596 - msmodelslim - INFO - use min-max observer:'model.layers.30.self_attn.k_proj.quant_input', range_parm:tensor(30.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,597 - msmodelslim - INFO - use min-max observer:'model.layers.30.self_attn.v_proj.quant_input', range_parm:tensor(30.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,598 - msmodelslim - INFO - use min-max observer:'model.layers.30.self_attn.o_proj.quant_input', range_parm:tensor(7.2188, dtype=torch.bfloat16)
+2025-12-13 09:33:12,599 - msmodelslim - INFO - use min-max observer:'model.layers.30.mlp.gate_proj.quant_input', range_parm:tensor(27.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,599 - msmodelslim - INFO - use min-max observer:'model.layers.30.mlp.up_proj.quant_input', range_parm:tensor(27.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,600 - msmodelslim - INFO - use min-max observer:'model.layers.31.self_attn.q_proj.quant_input', range_parm:tensor(26.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,601 - msmodelslim - INFO - use min-max observer:'model.layers.31.self_attn.k_proj.quant_input', range_parm:tensor(26.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,601 - msmodelslim - INFO - use min-max observer:'model.layers.31.self_attn.v_proj.quant_input', range_parm:tensor(26.3750, dtype=torch.bfloat16)
+2025-12-13 09:33:12,602 - msmodelslim - INFO - use min-max observer:'model.layers.31.self_attn.o_proj.quant_input', range_parm:tensor(6.8438, dtype=torch.bfloat16)
+2025-12-13 09:33:12,603 - msmodelslim - INFO - use min-max observer:'model.layers.31.mlp.gate_proj.quant_input', range_parm:tensor(28.1250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,604 - msmodelslim - INFO - use min-max observer:'model.layers.31.mlp.up_proj.quant_input', range_parm:tensor(28.1250, dtype=torch.bfloat16)
+2025-12-13 09:33:12,604 - msmodelslim - INFO - use min-max observer:'model.layers.32.self_attn.q_proj.quant_input', range_parm:tensor(32.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,605 - msmodelslim - INFO - use min-max observer:'model.layers.32.self_attn.k_proj.quant_input', range_parm:tensor(32.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,606 - msmodelslim - INFO - use min-max observer:'model.layers.32.self_attn.v_proj.quant_input', range_parm:tensor(32.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,607 - msmodelslim - INFO - use min-max observer:'model.layers.32.self_attn.o_proj.quant_input', range_parm:tensor(6.7812, dtype=torch.bfloat16)
+2025-12-13 09:33:12,607 - msmodelslim - INFO - use min-max observer:'model.layers.32.mlp.gate_proj.quant_input', range_parm:tensor(29., dtype=torch.bfloat16)
+2025-12-13 09:33:12,608 - msmodelslim - INFO - use min-max observer:'model.layers.32.mlp.up_proj.quant_input', range_parm:tensor(29., dtype=torch.bfloat16)
+2025-12-13 09:33:12,609 - msmodelslim - INFO - use min-max observer:'model.layers.33.self_attn.q_proj.quant_input', range_parm:tensor(29.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,610 - msmodelslim - INFO - use min-max observer:'model.layers.33.self_attn.k_proj.quant_input', range_parm:tensor(29.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,610 - msmodelslim - INFO - use min-max observer:'model.layers.33.self_attn.v_proj.quant_input', range_parm:tensor(29.7500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,611 - msmodelslim - INFO - use min-max observer:'model.layers.33.self_attn.o_proj.quant_input', range_parm:tensor(6.2500, dtype=torch.bfloat16)
+2025-12-13 09:33:12,612 - msmodelslim - INFO - use min-max observer:'model.layers.33.mlp.gate_proj.quant_input', range_parm:tensor(44.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,612 - msmodelslim - INFO - use min-max observer:'model.layers.33.mlp.up_proj.quant_input', range_parm:tensor(44.5000, dtype=torch.bfloat16)
+2025-12-13 09:33:12,613 - msmodelslim - INFO - Quantizer initialized successful!
+2025-12-13 09:33:12,613 - msmodelslim - INFO - Calibration start!
+('Warning: torch.save with "_use_new_zipfile_serialization = False" is not recommended for npu tensor, which may bring unexpected errors and hopefully set "_use_new_zipfile_serialization = True"', 'if it is necessary to use this, please convert the npu tensor to cpu tensor for saving')
+  0%|          | 0/44 [00:00<?, ?it/s]2025-12-13 09:33:12,668 - msmodelslim - INFO - layer: 'model.layers.0.self_attn.q_proj.quant_input', range: tensor(41.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,674 - msmodelslim - INFO - layer: 'model.layers.0.self_attn.k_proj.quant_input', range: tensor(41.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,678 - msmodelslim - INFO - layer: 'model.layers.0.self_attn.v_proj.quant_input', range: tensor(41.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,685 - msmodelslim - INFO - layer: 'model.layers.0.self_attn.o_proj.quant_input', range: tensor(11.4375, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,693 - msmodelslim - INFO - layer: 'model.layers.0.mlp.gate_proj.quant_input', range: tensor(49.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,700 - msmodelslim - INFO - layer: 'model.layers.0.mlp.up_proj.quant_input', range: tensor(49.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,706 - msmodelslim - INFO - layer: 'model.layers.1.self_attn.q_proj.quant_input', range: tensor(37.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,711 - msmodelslim - INFO - layer: 'model.layers.1.self_attn.k_proj.quant_input', range: tensor(37.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,715 - msmodelslim - INFO - layer: 'model.layers.1.self_attn.v_proj.quant_input', range: tensor(37.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,721 - msmodelslim - INFO - layer: 'model.layers.1.self_attn.o_proj.quant_input', range: tensor(8.6250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,729 - msmodelslim - INFO - layer: 'model.layers.1.mlp.gate_proj.quant_input', range: tensor(51., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,736 - msmodelslim - INFO - layer: 'model.layers.1.mlp.up_proj.quant_input', range: tensor(51., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,742 - msmodelslim - INFO - layer: 'model.layers.2.self_attn.q_proj.quant_input', range: tensor(52.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,746 - msmodelslim - INFO - layer: 'model.layers.2.self_attn.k_proj.quant_input', range: tensor(52.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,750 - msmodelslim - INFO - layer: 'model.layers.2.self_attn.v_proj.quant_input', range: tensor(52.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,757 - msmodelslim - INFO - layer: 'model.layers.2.self_attn.o_proj.quant_input', range: tensor(11.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,765 - msmodelslim - INFO - layer: 'model.layers.2.mlp.gate_proj.quant_input', range: tensor(25.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,772 - msmodelslim - INFO - layer: 'model.layers.2.mlp.up_proj.quant_input', range: tensor(25.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,781 - msmodelslim - INFO - layer: 'model.layers.3.self_attn.q_proj.quant_input', range: tensor(54.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,786 - msmodelslim - INFO - layer: 'model.layers.3.self_attn.k_proj.quant_input', range: tensor(54.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,791 - msmodelslim - INFO - layer: 'model.layers.3.self_attn.v_proj.quant_input', range: tensor(54.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,798 - msmodelslim - INFO - layer: 'model.layers.3.self_attn.o_proj.quant_input', range: tensor(12.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,806 - msmodelslim - INFO - layer: 'model.layers.3.mlp.gate_proj.quant_input', range: tensor(25.6250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,813 - msmodelslim - INFO - layer: 'model.layers.3.mlp.up_proj.quant_input', range: tensor(25.6250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,819 - msmodelslim - INFO - layer: 'model.layers.4.self_attn.q_proj.quant_input', range: tensor(61.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,824 - msmodelslim - INFO - layer: 'model.layers.4.self_attn.k_proj.quant_input', range: tensor(61.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,828 - msmodelslim - INFO - layer: 'model.layers.4.self_attn.v_proj.quant_input', range: tensor(61.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,835 - msmodelslim - INFO - layer: 'model.layers.4.self_attn.o_proj.quant_input', range: tensor(10.1250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,843 - msmodelslim - INFO - layer: 'model.layers.4.mlp.gate_proj.quant_input', range: tensor(28.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,850 - msmodelslim - INFO - layer: 'model.layers.4.mlp.up_proj.quant_input', range: tensor(28.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,856 - msmodelslim - INFO - layer: 'model.layers.5.self_attn.q_proj.quant_input', range: tensor(66.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,860 - msmodelslim - INFO - layer: 'model.layers.5.self_attn.k_proj.quant_input', range: tensor(66.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,865 - msmodelslim - INFO - layer: 'model.layers.5.self_attn.v_proj.quant_input', range: tensor(66.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,871 - msmodelslim - INFO - layer: 'model.layers.5.self_attn.o_proj.quant_input', range: tensor(10.0625, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,879 - msmodelslim - INFO - layer: 'model.layers.5.mlp.gate_proj.quant_input', range: tensor(31.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,886 - msmodelslim - INFO - layer: 'model.layers.5.mlp.up_proj.quant_input', range: tensor(31.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,892 - msmodelslim - INFO - layer: 'model.layers.6.self_attn.q_proj.quant_input', range: tensor(53.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,897 - msmodelslim - INFO - layer: 'model.layers.6.self_attn.k_proj.quant_input', range: tensor(53.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,901 - msmodelslim - INFO - layer: 'model.layers.6.self_attn.v_proj.quant_input', range: tensor(53.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,908 - msmodelslim - INFO - layer: 'model.layers.6.self_attn.o_proj.quant_input', range: tensor(12., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,915 - msmodelslim - INFO - layer: 'model.layers.6.mlp.gate_proj.quant_input', range: tensor(35., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,922 - msmodelslim - INFO - layer: 'model.layers.6.mlp.up_proj.quant_input', range: tensor(35., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,928 - msmodelslim - INFO - layer: 'model.layers.7.self_attn.q_proj.quant_input', range: tensor(51.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,932 - msmodelslim - INFO - layer: 'model.layers.7.self_attn.k_proj.quant_input', range: tensor(51.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,937 - msmodelslim - INFO - layer: 'model.layers.7.self_attn.v_proj.quant_input', range: tensor(51.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,943 - msmodelslim - INFO - layer: 'model.layers.7.self_attn.o_proj.quant_input', range: tensor(9.5625, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,951 - msmodelslim - INFO - layer: 'model.layers.7.mlp.gate_proj.quant_input', range: tensor(54.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,958 - msmodelslim - INFO - layer: 'model.layers.7.mlp.up_proj.quant_input', range: tensor(54.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,964 - msmodelslim - INFO - layer: 'model.layers.8.self_attn.q_proj.quant_input', range: tensor(58.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,968 - msmodelslim - INFO - layer: 'model.layers.8.self_attn.k_proj.quant_input', range: tensor(58.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,972 - msmodelslim - INFO - layer: 'model.layers.8.self_attn.v_proj.quant_input', range: tensor(58.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,979 - msmodelslim - INFO - layer: 'model.layers.8.self_attn.o_proj.quant_input', range: tensor(13.9375, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,987 - msmodelslim - INFO - layer: 'model.layers.8.mlp.gate_proj.quant_input', range: tensor(66.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:12,993 - msmodelslim - INFO - layer: 'model.layers.8.mlp.up_proj.quant_input', range: tensor(66.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,003 - msmodelslim - INFO - layer: 'model.layers.9.self_attn.q_proj.quant_input', range: tensor(43.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,008 - msmodelslim - INFO - layer: 'model.layers.9.self_attn.k_proj.quant_input', range: tensor(43.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,012 - msmodelslim - INFO - layer: 'model.layers.9.self_attn.v_proj.quant_input', range: tensor(43.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,019 - msmodelslim - INFO - layer: 'model.layers.9.self_attn.o_proj.quant_input', range: tensor(8.0625, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,027 - msmodelslim - INFO - layer: 'model.layers.9.mlp.gate_proj.quant_input', range: tensor(40.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,035 - msmodelslim - INFO - layer: 'model.layers.9.mlp.up_proj.quant_input', range: tensor(40.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,041 - msmodelslim - INFO - layer: 'model.layers.10.self_attn.q_proj.quant_input', range: tensor(38.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,045 - msmodelslim - INFO - layer: 'model.layers.10.self_attn.k_proj.quant_input', range: tensor(38.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,049 - msmodelslim - INFO - layer: 'model.layers.10.self_attn.v_proj.quant_input', range: tensor(38.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,056 - msmodelslim - INFO - layer: 'model.layers.10.self_attn.o_proj.quant_input', range: tensor(10.1250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,063 - msmodelslim - INFO - layer: 'model.layers.10.mlp.gate_proj.quant_input', range: tensor(40.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,070 - msmodelslim - INFO - layer: 'model.layers.10.mlp.up_proj.quant_input', range: tensor(40.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,076 - msmodelslim - INFO - layer: 'model.layers.11.self_attn.q_proj.quant_input', range: tensor(39.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,081 - msmodelslim - INFO - layer: 'model.layers.11.self_attn.k_proj.quant_input', range: tensor(39.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,085 - msmodelslim - INFO - layer: 'model.layers.11.self_attn.v_proj.quant_input', range: tensor(39.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,092 - msmodelslim - INFO - layer: 'model.layers.11.self_attn.o_proj.quant_input', range: tensor(10.6250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,099 - msmodelslim - INFO - layer: 'model.layers.11.mlp.gate_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,106 - msmodelslim - INFO - layer: 'model.layers.11.mlp.up_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,112 - msmodelslim - INFO - layer: 'model.layers.12.self_attn.q_proj.quant_input', range: tensor(37.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,116 - msmodelslim - INFO - layer: 'model.layers.12.self_attn.k_proj.quant_input', range: tensor(37.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,121 - msmodelslim - INFO - layer: 'model.layers.12.self_attn.v_proj.quant_input', range: tensor(37.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,127 - msmodelslim - INFO - layer: 'model.layers.12.self_attn.o_proj.quant_input', range: tensor(9.4375, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,134 - msmodelslim - INFO - layer: 'model.layers.12.mlp.gate_proj.quant_input', range: tensor(37.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,141 - msmodelslim - INFO - layer: 'model.layers.12.mlp.up_proj.quant_input', range: tensor(37.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,147 - msmodelslim - INFO - layer: 'model.layers.13.self_attn.q_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,151 - msmodelslim - INFO - layer: 'model.layers.13.self_attn.k_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,156 - msmodelslim - INFO - layer: 'model.layers.13.self_attn.v_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,162 - msmodelslim - INFO - layer: 'model.layers.13.self_attn.o_proj.quant_input', range: tensor(9.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,170 - msmodelslim - INFO - layer: 'model.layers.13.mlp.gate_proj.quant_input', range: tensor(35.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,177 - msmodelslim - INFO - layer: 'model.layers.13.mlp.up_proj.quant_input', range: tensor(35.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,183 - msmodelslim - INFO - layer: 'model.layers.14.self_attn.q_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,187 - msmodelslim - INFO - layer: 'model.layers.14.self_attn.k_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,191 - msmodelslim - INFO - layer: 'model.layers.14.self_attn.v_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,197 - msmodelslim - INFO - layer: 'model.layers.14.self_attn.o_proj.quant_input', range: tensor(8.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,205 - msmodelslim - INFO - layer: 'model.layers.14.mlp.gate_proj.quant_input', range: tensor(35.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,212 - msmodelslim - INFO - layer: 'model.layers.14.mlp.up_proj.quant_input', range: tensor(35.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,221 - msmodelslim - INFO - layer: 'model.layers.15.self_attn.q_proj.quant_input', range: tensor(39.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,226 - msmodelslim - INFO - layer: 'model.layers.15.self_attn.k_proj.quant_input', range: tensor(39.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,231 - msmodelslim - INFO - layer: 'model.layers.15.self_attn.v_proj.quant_input', range: tensor(39.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,237 - msmodelslim - INFO - layer: 'model.layers.15.self_attn.o_proj.quant_input', range: tensor(10., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,246 - msmodelslim - INFO - layer: 'model.layers.15.mlp.gate_proj.quant_input', range: tensor(33., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,253 - msmodelslim - INFO - layer: 'model.layers.15.mlp.up_proj.quant_input', range: tensor(33., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,259 - msmodelslim - INFO - layer: 'model.layers.16.self_attn.q_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,263 - msmodelslim - INFO - layer: 'model.layers.16.self_attn.k_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,268 - msmodelslim - INFO - layer: 'model.layers.16.self_attn.v_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,274 - msmodelslim - INFO - layer: 'model.layers.16.self_attn.o_proj.quant_input', range: tensor(10.4375, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,282 - msmodelslim - INFO - layer: 'model.layers.16.mlp.gate_proj.quant_input', range: tensor(31.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,289 - msmodelslim - INFO - layer: 'model.layers.16.mlp.up_proj.quant_input', range: tensor(31.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,295 - msmodelslim - INFO - layer: 'model.layers.17.self_attn.q_proj.quant_input', range: tensor(35.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,300 - msmodelslim - INFO - layer: 'model.layers.17.self_attn.k_proj.quant_input', range: tensor(35.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,304 - msmodelslim - INFO - layer: 'model.layers.17.self_attn.v_proj.quant_input', range: tensor(35.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,311 - msmodelslim - INFO - layer: 'model.layers.17.self_attn.o_proj.quant_input', range: tensor(8.3125, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,318 - msmodelslim - INFO - layer: 'model.layers.17.mlp.gate_proj.quant_input', range: tensor(29.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,325 - msmodelslim - INFO - layer: 'model.layers.17.mlp.up_proj.quant_input', range: tensor(29.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,331 - msmodelslim - INFO - layer: 'model.layers.18.self_attn.q_proj.quant_input', range: tensor(39.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,336 - msmodelslim - INFO - layer: 'model.layers.18.self_attn.k_proj.quant_input', range: tensor(39.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,340 - msmodelslim - INFO - layer: 'model.layers.18.self_attn.v_proj.quant_input', range: tensor(39.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,347 - msmodelslim - INFO - layer: 'model.layers.18.self_attn.o_proj.quant_input', range: tensor(6.7812, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,354 - msmodelslim - INFO - layer: 'model.layers.18.mlp.gate_proj.quant_input', range: tensor(29.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,361 - msmodelslim - INFO - layer: 'model.layers.18.mlp.up_proj.quant_input', range: tensor(29.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,368 - msmodelslim - INFO - layer: 'model.layers.19.self_attn.q_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,372 - msmodelslim - INFO - layer: 'model.layers.19.self_attn.k_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,377 - msmodelslim - INFO - layer: 'model.layers.19.self_attn.v_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,383 - msmodelslim - INFO - layer: 'model.layers.19.self_attn.o_proj.quant_input', range: tensor(10.1875, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,391 - msmodelslim - INFO - layer: 'model.layers.19.mlp.gate_proj.quant_input', range: tensor(30., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,398 - msmodelslim - INFO - layer: 'model.layers.19.mlp.up_proj.quant_input', range: tensor(30., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,404 - msmodelslim - INFO - layer: 'model.layers.20.self_attn.q_proj.quant_input', range: tensor(41.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,409 - msmodelslim - INFO - layer: 'model.layers.20.self_attn.k_proj.quant_input', range: tensor(41.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,413 - msmodelslim - INFO - layer: 'model.layers.20.self_attn.v_proj.quant_input', range: tensor(41.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,420 - msmodelslim - INFO - layer: 'model.layers.20.self_attn.o_proj.quant_input', range: tensor(6.2812, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,427 - msmodelslim - INFO - layer: 'model.layers.20.mlp.gate_proj.quant_input', range: tensor(32.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,434 - msmodelslim - INFO - layer: 'model.layers.20.mlp.up_proj.quant_input', range: tensor(32.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,444 - msmodelslim - INFO - layer: 'model.layers.21.self_attn.q_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,449 - msmodelslim - INFO - layer: 'model.layers.21.self_attn.k_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,453 - msmodelslim - INFO - layer: 'model.layers.21.self_attn.v_proj.quant_input', range: tensor(38., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,460 - msmodelslim - INFO - layer: 'model.layers.21.self_attn.o_proj.quant_input', range: tensor(7.0312, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,468 - msmodelslim - INFO - layer: 'model.layers.21.mlp.gate_proj.quant_input', range: tensor(31.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,475 - msmodelslim - INFO - layer: 'model.layers.21.mlp.up_proj.quant_input', range: tensor(31.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,481 - msmodelslim - INFO - layer: 'model.layers.22.self_attn.q_proj.quant_input', range: tensor(42.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,486 - msmodelslim - INFO - layer: 'model.layers.22.self_attn.k_proj.quant_input', range: tensor(42.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,490 - msmodelslim - INFO - layer: 'model.layers.22.self_attn.v_proj.quant_input', range: tensor(42.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,497 - msmodelslim - INFO - layer: 'model.layers.22.self_attn.o_proj.quant_input', range: tensor(7.0625, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,505 - msmodelslim - INFO - layer: 'model.layers.22.mlp.gate_proj.quant_input', range: tensor(31.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,512 - msmodelslim - INFO - layer: 'model.layers.22.mlp.up_proj.quant_input', range: tensor(31.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,518 - msmodelslim - INFO - layer: 'model.layers.23.self_attn.q_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,522 - msmodelslim - INFO - layer: 'model.layers.23.self_attn.k_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,527 - msmodelslim - INFO - layer: 'model.layers.23.self_attn.v_proj.quant_input', range: tensor(38.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,533 - msmodelslim - INFO - layer: 'model.layers.23.self_attn.o_proj.quant_input', range: tensor(8.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,541 - msmodelslim - INFO - layer: 'model.layers.23.mlp.gate_proj.quant_input', range: tensor(30., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,548 - msmodelslim - INFO - layer: 'model.layers.23.mlp.up_proj.quant_input', range: tensor(30., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,554 - msmodelslim - INFO - layer: 'model.layers.24.self_attn.q_proj.quant_input', range: tensor(41.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,558 - msmodelslim - INFO - layer: 'model.layers.24.self_attn.k_proj.quant_input', range: tensor(41.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,563 - msmodelslim - INFO - layer: 'model.layers.24.self_attn.v_proj.quant_input', range: tensor(41.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,570 - msmodelslim - INFO - layer: 'model.layers.24.self_attn.o_proj.quant_input', range: tensor(8.0625, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,577 - msmodelslim - INFO - layer: 'model.layers.24.mlp.gate_proj.quant_input', range: tensor(28.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,584 - msmodelslim - INFO - layer: 'model.layers.24.mlp.up_proj.quant_input', range: tensor(28.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,590 - msmodelslim - INFO - layer: 'model.layers.25.self_attn.q_proj.quant_input', range: tensor(37.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,595 - msmodelslim - INFO - layer: 'model.layers.25.self_attn.k_proj.quant_input', range: tensor(37.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,599 - msmodelslim - INFO - layer: 'model.layers.25.self_attn.v_proj.quant_input', range: tensor(37.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,606 - msmodelslim - INFO - layer: 'model.layers.25.self_attn.o_proj.quant_input', range: tensor(6.6250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,613 - msmodelslim - INFO - layer: 'model.layers.25.mlp.gate_proj.quant_input', range: tensor(27.1250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,620 - msmodelslim - INFO - layer: 'model.layers.25.mlp.up_proj.quant_input', range: tensor(27.1250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,627 - msmodelslim - INFO - layer: 'model.layers.26.self_attn.q_proj.quant_input', range: tensor(40.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,631 - msmodelslim - INFO - layer: 'model.layers.26.self_attn.k_proj.quant_input', range: tensor(40.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,635 - msmodelslim - INFO - layer: 'model.layers.26.self_attn.v_proj.quant_input', range: tensor(40.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,642 - msmodelslim - INFO - layer: 'model.layers.26.self_attn.o_proj.quant_input', range: tensor(7.9375, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,650 - msmodelslim - INFO - layer: 'model.layers.26.mlp.gate_proj.quant_input', range: tensor(25.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,657 - msmodelslim - INFO - layer: 'model.layers.26.mlp.up_proj.quant_input', range: tensor(25.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,666 - msmodelslim - INFO - layer: 'model.layers.27.self_attn.q_proj.quant_input', range: tensor(34.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,671 - msmodelslim - INFO - layer: 'model.layers.27.self_attn.k_proj.quant_input', range: tensor(34.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,676 - msmodelslim - INFO - layer: 'model.layers.27.self_attn.v_proj.quant_input', range: tensor(34.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,682 - msmodelslim - INFO - layer: 'model.layers.27.self_attn.o_proj.quant_input', range: tensor(6.3125, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,690 - msmodelslim - INFO - layer: 'model.layers.27.mlp.gate_proj.quant_input', range: tensor(26.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,697 - msmodelslim - INFO - layer: 'model.layers.27.mlp.up_proj.quant_input', range: tensor(26.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,703 - msmodelslim - INFO - layer: 'model.layers.28.self_attn.q_proj.quant_input', range: tensor(33.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,708 - msmodelslim - INFO - layer: 'model.layers.28.self_attn.k_proj.quant_input', range: tensor(33.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,712 - msmodelslim - INFO - layer: 'model.layers.28.self_attn.v_proj.quant_input', range: tensor(33.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,719 - msmodelslim - INFO - layer: 'model.layers.28.self_attn.o_proj.quant_input', range: tensor(8.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,727 - msmodelslim - INFO - layer: 'model.layers.28.mlp.gate_proj.quant_input', range: tensor(25.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,734 - msmodelslim - INFO - layer: 'model.layers.28.mlp.up_proj.quant_input', range: tensor(25.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,740 - msmodelslim - INFO - layer: 'model.layers.29.self_attn.q_proj.quant_input', range: tensor(32., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,744 - msmodelslim - INFO - layer: 'model.layers.29.self_attn.k_proj.quant_input', range: tensor(32., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,748 - msmodelslim - INFO - layer: 'model.layers.29.self_attn.v_proj.quant_input', range: tensor(32., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,755 - msmodelslim - INFO - layer: 'model.layers.29.self_attn.o_proj.quant_input', range: tensor(6.8125, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,762 - msmodelslim - INFO - layer: 'model.layers.29.mlp.gate_proj.quant_input', range: tensor(25.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,769 - msmodelslim - INFO - layer: 'model.layers.29.mlp.up_proj.quant_input', range: tensor(25.8750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,776 - msmodelslim - INFO - layer: 'model.layers.30.self_attn.q_proj.quant_input', range: tensor(30.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,780 - msmodelslim - INFO - layer: 'model.layers.30.self_attn.k_proj.quant_input', range: tensor(30.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,784 - msmodelslim - INFO - layer: 'model.layers.30.self_attn.v_proj.quant_input', range: tensor(30.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,791 - msmodelslim - INFO - layer: 'model.layers.30.self_attn.o_proj.quant_input', range: tensor(7.2188, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,799 - msmodelslim - INFO - layer: 'model.layers.30.mlp.gate_proj.quant_input', range: tensor(27.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,806 - msmodelslim - INFO - layer: 'model.layers.30.mlp.up_proj.quant_input', range: tensor(27.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,812 - msmodelslim - INFO - layer: 'model.layers.31.self_attn.q_proj.quant_input', range: tensor(26.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,816 - msmodelslim - INFO - layer: 'model.layers.31.self_attn.k_proj.quant_input', range: tensor(26.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,820 - msmodelslim - INFO - layer: 'model.layers.31.self_attn.v_proj.quant_input', range: tensor(26.3750, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,827 - msmodelslim - INFO - layer: 'model.layers.31.self_attn.o_proj.quant_input', range: tensor(6.8438, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,835 - msmodelslim - INFO - layer: 'model.layers.31.mlp.gate_proj.quant_input', range: tensor(28.1250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,842 - msmodelslim - INFO - layer: 'model.layers.31.mlp.up_proj.quant_input', range: tensor(28.1250, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,848 - msmodelslim - INFO - layer: 'model.layers.32.self_attn.q_proj.quant_input', range: tensor(32.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,852 - msmodelslim - INFO - layer: 'model.layers.32.self_attn.k_proj.quant_input', range: tensor(32.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,857 - msmodelslim - INFO - layer: 'model.layers.32.self_attn.v_proj.quant_input', range: tensor(32.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,863 - msmodelslim - INFO - layer: 'model.layers.32.self_attn.o_proj.quant_input', range: tensor(6.7812, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,871 - msmodelslim - INFO - layer: 'model.layers.32.mlp.gate_proj.quant_input', range: tensor(29., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,878 - msmodelslim - INFO - layer: 'model.layers.32.mlp.up_proj.quant_input', range: tensor(29., dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,887 - msmodelslim - INFO - layer: 'model.layers.33.self_attn.q_proj.quant_input', range: tensor(29.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,892 - msmodelslim - INFO - layer: 'model.layers.33.self_attn.k_proj.quant_input', range: tensor(29.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,896 - msmodelslim - INFO - layer: 'model.layers.33.self_attn.v_proj.quant_input', range: tensor(29.7500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,903 - msmodelslim - INFO - layer: 'model.layers.33.self_attn.o_proj.quant_input', range: tensor(6.2500, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,911 - msmodelslim - INFO - layer: 'model.layers.33.mlp.gate_proj.quant_input', range: tensor(44.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+2025-12-13 09:33:13,919 - msmodelslim - INFO - layer: 'model.layers.33.mlp.up_proj.quant_input', range: tensor(44.5000, dtype=torch.bfloat16), Automatically set the drop rate: 1.0
+  2%|▏         | 1/44 [00:01<00:56,  1.30s/it]  5%|▍         | 2/44 [00:02<00:39,  1.05it/s]  7%|▋         | 3/44 [00:02<00:34,  1.19it/s]  9%|▉         | 4/44 [00:03<00:31,  1.27it/s] 11%|█▏        | 5/44 [00:04<00:29,  1.32it/s] 14%|█▎        | 6/44 [00:04<00:28,  1.34it/s] 16%|█▌        | 7/44 [00:05<00:27,  1.35it/s] 18%|█▊        | 8/44 [00:06<00:26,  1.37it/s] 20%|██        | 9/44 [00:07<00:25,  1.37it/s] 23%|██▎       | 10/44 [00:07<00:24,  1.39it/s] 25%|██▌       | 11/44 [00:08<00:23,  1.39it/s] 27%|██▋       | 12/44 [00:09<00:23,  1.39it/s] 30%|██▉       | 13/44 [00:09<00:22,  1.39it/s] 32%|███▏      | 14/44 [00:10<00:21,  1.39it/s] 34%|███▍      | 15/44 [00:11<00:20,  1.38it/s] 36%|███▋      | 16/44 [00:12<00:20,  1.38it/s] 39%|███▊      | 17/44 [00:12<00:19,  1.38it/s] 41%|████      | 18/44 [00:13<00:18,  1.37it/s] 43%|████▎     | 19/44 [00:14<00:18,  1.37it/s] 45%|████▌     | 20/44 [00:14<00:17,  1.37it/s] 48%|████▊     | 21/44 [00:15<00:16,  1.37it/s] 50%|█████     | 22/44 [00:16<00:16,  1.37it/s] 52%|█████▏    | 23/44 [00:17<00:15,  1.37it/s] 55%|█████▍    | 24/44 [00:17<00:14,  1.37it/s] 57%|█████▋    | 25/44 [00:18<00:13,  1.36it/s] 59%|█████▉    | 26/44 [00:19<00:13,  1.36it/s] 61%|██████▏   | 27/44 [00:20<00:12,  1.35it/s] 64%|██████▎   | 28/44 [00:20<00:11,  1.35it/s] 66%|██████▌   | 29/44 [00:21<00:11,  1.35it/s] 68%|██████▊   | 30/44 [00:22<00:10,  1.35it/s] 70%|███████   | 31/44 [00:23<00:09,  1.35it/s] 73%|███████▎  | 32/44 [00:23<00:08,  1.36it/s] 75%|███████▌  | 33/44 [00:24<00:08,  1.35it/s] 77%|███████▋  | 34/44 [00:25<00:07,  1.36it/s] 80%|███████▉  | 35/44 [00:26<00:06,  1.36it/s] 82%|████████▏ | 36/44 [00:26<00:05,  1.36it/s] 84%|████████▍ | 37/44 [00:27<00:05,  1.35it/s] 86%|████████▋ | 38/44 [00:28<00:04,  1.35it/s] 89%|████████▊ | 39/44 [00:29<00:03,  1.34it/s] 91%|█████████ | 40/44 [00:29<00:02,  1.34it/s] 93%|█████████▎| 41/44 [00:30<00:02,  1.35it/s] 95%|█████████▌| 42/44 [00:31<00:01,  1.36it/s] 98%|█████████▊| 43/44 [00:31<00:00,  1.35it/s]100%|██████████| 44/44 [00:32<00:00,  1.31it/s]100%|██████████| 44/44 [00:32<00:00,  1.34it/s]
+2025-12-13 09:33:45,417 - msmodelslim - INFO - Calibration end!
+2025-12-13 09:33:45,446 - msmodelslim - INFO - write directory exists, write file to directory '/run/models/openPangu-7B-a8w8'
+2025-12-13 09:33:45,447 - msmodelslim - WARNING - ascendV1 is new version, numpy and safe_tensor will be ignored, only ascendV1 will be saved.
+2025-12-13 09:33:45,448 - msmodelslim - WARNING - invalid `safetensors_name`, defaulting to `quant_model_weight_w8a8.safetensors`
+2025-12-13 09:33:45,448 - msmodelslim - WARNING - invalid `json_name`, defaulting to `quant_model_description.json`
+2025-12-13 09:33:45,448 - msmodelslim - WARNING - '/run/models/openPangu-7B-a8w8/quant_model_weight_w8a8.safetensors' already exist. The original file will be overwritten.
+2025-12-13 09:33:45,448 - msmodelslim - WARNING - '/run/models/openPangu-7B-a8w8/quant_model_weight_w8a8.safetensors' already exist. The original file will be overwritten.
+Collect quant param:   0%|          | 0/857 [00:00<?, ?it/s]Collect quant param:   0%|          | 3/857 [00:00<00:51, 16.44it/s]Collect quant param:   2%|▏         | 20/857 [00:00<00:13, 62.96it/s]Collect quant param:   4%|▎         | 32/857 [00:00<00:11, 74.37it/s]Collect quant param:   5%|▌         | 45/857 [00:00<00:10, 81.20it/s]Collect quant param:   6%|▋         | 54/857 [00:00<00:09, 83.51it/s]Collect quant param:   8%|▊         | 70/857 [00:00<00:08, 87.87it/s]Collect quant param:  10%|▉         | 82/857 [00:01<00:08, 89.09it/s]Collect quant param:  11%|█         | 95/857 [00:01<00:08, 90.14it/s]Collect quant param:  12%|█▏        | 107/857 [00:01<00:08, 90.70it/s]Collect quant param:  14%|█▍        | 120/857 [00:01<00:07, 92.49it/s]Collect quant param:  15%|█▌        | 132/857 [00:01<00:07, 92.24it/s]Collect quant param:  17%|█▋        | 145/857 [00:01<00:07, 92.52it/s]Collect quant param:  18%|█▊        | 157/857 [00:01<00:07, 92.18it/s]Collect quant param:  20%|█▉        | 170/857 [00:01<00:07, 93.23it/s]Collect quant param:  21%|██        | 182/857 [00:02<00:07, 92.31it/s]Collect quant param:  23%|██▎       | 195/857 [00:02<00:07, 93.38it/s]Collect quant param:  24%|██▍       | 207/857 [00:02<00:06, 93.15it/s]Collect quant param:  26%|██▌       | 220/857 [00:02<00:06, 93.76it/s]Collect quant param:  27%|██▋       | 232/857 [00:02<00:06, 93.28it/s]Collect quant param:  29%|██▊       | 245/857 [00:02<00:06, 94.39it/s]Collect quant param:  30%|██▉       | 257/857 [00:02<00:06, 93.94it/s]Collect quant param:  32%|███▏      | 270/857 [00:03<00:06, 93.95it/s]Collect quant param:  33%|███▎      | 282/857 [00:03<00:06, 93.24it/s]Collect quant param:  34%|███▍      | 295/857 [00:03<00:06, 93.37it/s]Collect quant param:  36%|███▌      | 307/857 [00:03<00:05, 93.05it/s]Collect quant param:  37%|███▋      | 320/857 [00:03<00:05, 93.43it/s]Collect quant param:  39%|███▊      | 332/857 [00:03<00:05, 93.04it/s]Collect quant param:  40%|████      | 345/857 [00:03<00:05, 93.16it/s]Collect quant param:  42%|████▏     | 357/857 [00:03<00:05, 92.05it/s]Collect quant param:  43%|████▎     | 370/857 [00:04<00:05, 91.74it/s]Collect quant param:  45%|████▍     | 382/857 [00:04<00:05, 91.20it/s]Collect quant param:  46%|████▌     | 395/857 [00:04<00:05, 91.73it/s]Collect quant param:  47%|████▋     | 407/857 [00:04<00:04, 91.32it/s]Collect quant param:  49%|████▉     | 420/857 [00:04<00:04, 92.58it/s]Collect quant param:  50%|█████     | 432/857 [00:04<00:04, 92.48it/s]Collect quant param:  52%|█████▏    | 445/857 [00:04<00:04, 93.41it/s]Collect quant param:  53%|█████▎    | 457/857 [00:05<00:04, 92.93it/s]Collect quant param:  55%|█████▍    | 470/857 [00:05<00:04, 93.17it/s]Collect quant param:  56%|█████▌    | 482/857 [00:05<00:04, 92.83it/s]Collect quant param:  58%|█████▊    | 495/857 [00:05<00:03, 93.52it/s]Collect quant param:  59%|█████▉    | 507/857 [00:05<00:03, 93.08it/s]Collect quant param:  61%|██████    | 520/857 [00:05<00:03, 93.48it/s]Collect quant param:  62%|██████▏   | 532/857 [00:05<00:03, 93.18it/s]Collect quant param:  64%|██████▎   | 545/857 [00:06<00:03, 93.52it/s]Collect quant param:  65%|██████▍   | 557/857 [00:06<00:03, 92.94it/s]Collect quant param:  67%|██████▋   | 570/857 [00:06<00:03, 94.21it/s]Collect quant param:  68%|██████▊   | 582/857 [00:06<00:02, 93.80it/s]Collect quant param:  69%|██████▉   | 595/857 [00:06<00:02, 94.74it/s]Collect quant param:  71%|███████   | 607/857 [00:06<00:02, 93.83it/s]Collect quant param:  72%|███████▏  | 620/857 [00:06<00:02, 94.74it/s]Collect quant param:  74%|███████▎  | 632/857 [00:06<00:02, 94.81it/s]Collect quant param:  75%|███████▌  | 645/857 [00:07<00:02, 95.82it/s]Collect quant param:  77%|███████▋  | 657/857 [00:07<00:02, 95.25it/s]Collect quant param:  78%|███████▊  | 670/857 [00:07<00:01, 96.01it/s]Collect quant param:  80%|███████▉  | 682/857 [00:07<00:01, 95.63it/s]Collect quant param:  81%|████████  | 695/857 [00:07<00:01, 96.40it/s]Collect quant param:  82%|████████▏ | 707/857 [00:07<00:01, 95.43it/s]Collect quant param:  84%|████████▍ | 720/857 [00:07<00:01, 95.85it/s]Collect quant param:  85%|████████▌ | 732/857 [00:07<00:01, 94.31it/s]Collect quant param:  87%|████████▋ | 745/857 [00:08<00:01, 94.64it/s]Collect quant param:  88%|████████▊ | 757/857 [00:08<00:01, 93.55it/s]Collect quant param:  90%|████████▉ | 770/857 [00:08<00:00, 94.60it/s]Collect quant param:  91%|█████████ | 782/857 [00:08<00:00, 93.48it/s]Collect quant param:  93%|█████████▎| 795/857 [00:08<00:00, 93.72it/s]Collect quant param:  94%|█████████▍| 807/857 [00:08<00:00, 93.22it/s]Collect quant param:  96%|█████████▌| 820/857 [00:08<00:00, 93.92it/s]Collect quant param:  97%|█████████▋| 832/857 [00:09<00:00, 92.87it/s]Collect quant param:  99%|█████████▊| 845/857 [00:09<00:00, 92.45it/s]Collect quant param: 100%|██████████| 857/857 [00:09<00:00, 68.65it/s]Collect quant param: 100%|██████████| 857/857 [00:09<00:00, 90.50it/s]
+2025-12-13 09:34:10,949 - msmodelslim - INFO - Save safetensors to /run/models/openPangu-7B-a8w8/quant_model_weight_w8a8.safetensors successfully
+2025-12-13 09:34:10,950 - msmodelslim - WARNING - '/run/models/openPangu-7B-a8w8/quant_model_description.json' already exist. The original file will be overwritten.
+2025-12-13 09:34:10,951 - msmodelslim - INFO - Path of quant_model_description_json is '/run/models/openPangu-7B-a8w8/quant_model_description.json' 
+2025-12-13 09:34:10,962 - msmodelslim - WARNING - '/run/models/openPangu-7B-a8w8/quant_model_description.json' already exist. The original file will be overwritten.
+2025-12-13 09:34:10,964 - msmodelslim - INFO - Save quant_model_description_json success!
+2025-12-13 09:34:10,965 - msmodelslim - INFO - Safetensors weight saved successfully
+2025-12-13 09:34:10,965 - msmodelslim - INFO - Save successfully!
+2025-12-13 09:34:11,090 - msmodelslim - WARNING - '/run/models/openPangu-7B-a8w8/quant_model_description.json' already exist. The original file will be overwritten.
+2025-12-13 09:34:11,103 - msmodelslim - WARNING - '/run/models/openPangu-7B-a8w8/config.json' already exist. The original file will be overwritten.
+sys:1: DeprecationWarning: builtin type swigvarlink has no __module__ attribute

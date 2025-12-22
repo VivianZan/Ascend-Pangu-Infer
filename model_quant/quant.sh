@@ -1,0 +1,2 @@
+python quant_pangu.py --model_path /opt/pangu/openPangu-Embedded-1B-V1.1 --save_directory /run/models/openPangu-1B-a8w8 --trust_remote_code True > pangu1B.log 2>&1
+python quant_pangu.py --model_path /opt/pangu/openPangu-Embedded-7B-V1.1 --save_directory /run/models/openPangu-7B-a8w8 --trust_remote_code True > pangu7B.log 2>&1

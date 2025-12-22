@@ -1,0 +1,72 @@
+Batch-8 Input len-32 Output len-32
+Avg latency: 0.6603575906250626 seconds
+Batch-8 Input len-32 Output len-64
+Avg latency: 1.2958969490136951 seconds
+Batch-8 Input len-32 Output len-128
+Avg latency: 2.596192301763222 seconds
+Batch-8 Input len-32 Output len-256
+Avg latency: 5.1740955804474655 seconds
+Batch-8 Input len-32 Output len-512
+Avg latency: 10.209344730479643 seconds
+Batch-8 Input len-32 Output len-1024
+Avg latency: 20.644310185313223 seconds
+Batch-8 Input len-64 Output len-32
+Avg latency: 0.6713390816003084 seconds
+Batch-8 Input len-64 Output len-64
+Avg latency: 1.3114314183127136 seconds
+Batch-8 Input len-64 Output len-128
+Avg latency: 2.5704502465669066 seconds
+Batch-8 Input len-64 Output len-256
+Avg latency: 5.0831860568840055 seconds
+Batch-8 Input len-64 Output len-512
+Avg latency: 10.300188745791093 seconds
+Batch-8 Input len-64 Output len-1024
+Avg latency: 20.50936862686649 seconds
+Batch-8 Input len-128 Output len-32
+Avg latency: 0.7066119168419391 seconds
+Batch-8 Input len-128 Output len-64
+Avg latency: 1.354304731823504 seconds
+Batch-8 Input len-128 Output len-128
+Avg latency: 2.5919270203914495 seconds
+Batch-8 Input len-128 Output len-256
+Avg latency: 5.174648742144927 seconds
+Batch-8 Input len-128 Output len-512
+Avg latency: 10.312011075299234 seconds
+Batch-8 Input len-128 Output len-1024
+Avg latency: 20.81709281504154 seconds
+Batch-8 Input len-256 Output len-32
+Avg latency: 0.7678968911990524 seconds
+Batch-8 Input len-256 Output len-64
+Avg latency: 1.4148666747845708 seconds
+Batch-8 Input len-256 Output len-128
+Avg latency: 2.655239250184968 seconds
+Batch-8 Input len-256 Output len-256
+Avg latency: 5.1932050289586185 seconds
+Batch-8 Input len-256 Output len-512
+Avg latency: 10.327189806383103 seconds
+Batch-8 Input len-256 Output len-1024
+Avg latency: 20.862009185319767 seconds
+Batch-8 Input len-512 Output len-32
+Avg latency: 0.890863663237542 seconds
+Batch-8 Input len-512 Output len-64
+Avg latency: 1.5481269063428045 seconds
+Batch-8 Input len-512 Output len-128
+Avg latency: 2.8112806058023123 seconds
+Batch-8 Input len-512 Output len-256
+Avg latency: 5.492205634340644 seconds
+Batch-8 Input len-512 Output len-512
+Avg latency: 10.710386183997617 seconds
+Batch-8 Input len-512 Output len-1024
+Avg latency: 21.2788542480208 seconds
+Batch-8 Input len-1024 Output len-32
+Avg latency: 1.1459828129503875 seconds
+Batch-8 Input len-1024 Output len-64
+Avg latency: 1.8073917274363338 seconds
+Batch-8 Input len-1024 Output len-128
+Avg latency: 3.1341333923861385 seconds
+Batch-8 Input len-1024 Output len-256
+Avg latency: 5.844215325405822 seconds
+Batch-8 Input len-1024 Output len-512
+Avg latency: 11.302739851595835 seconds
+Batch-8 Input len-1024 Output len-1024
+Avg latency: 21.963808229612187 seconds
