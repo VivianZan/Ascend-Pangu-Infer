@@ -1,0 +1,349 @@
+INFO 12-18 19:58:56 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 19:58:56 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 19:58:56 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 19:58:56 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 19:58:57 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 19:59:01 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 19:59:01 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 19:59:01 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 19:59:01 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 19:59:01 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 19:59:01 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 19:59:01 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0xfffd126bf600>, seed=0, num_prompts=100, dataset_name='random', dataset_path=None, custom_output_len=256, custom_skip_chat_template=False, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=8192, random_output_len=32, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, endpoint_type='openai', label=None, backend='vllm', base_url=None, host='127.0.0.1', port=8000, endpoint='/v1/completions', max_concurrency=None, model='pangu_embedded_1b', tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1/', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=True, disable_tqdm=False, profile=False, save_result=False, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='99', goodput=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None)
+WARNING 12-18 19:59:04 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 19:59:04 [datasets.py:355] Sampling input_len from [8191, 8191] and output_len from [32, 32]
+Starting initial single prompt test run...
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|          | 1/100 [00:01<03:03,  1.86s/it]
+  2%|▏         | 2/100 [00:02<01:32,  1.05it/s]
+  3%|▎         | 3/100 [00:02<01:01,  1.58it/s]
+  4%|▍         | 4/100 [00:02<00:46,  2.06it/s]
+  5%|▌         | 5/100 [00:02<00:37,  2.51it/s]
+  6%|▌         | 6/100 [00:03<00:33,  2.82it/s]
+  7%|▋         | 7/100 [00:03<00:27,  3.42it/s]
+  8%|▊         | 8/100 [00:03<00:31,  2.91it/s]
+ 11%|█         | 11/100 [00:04<00:19,  4.59it/s]
+ 12%|█▏        | 12/100 [00:04<00:17,  5.03it/s]
+ 13%|█▎        | 13/100 [00:04<00:19,  4.55it/s]
+ 14%|█▍        | 14/100 [00:05<00:22,  3.80it/s]
+ 15%|█▌        | 15/100 [00:05<00:22,  3.71it/s]
+ 16%|█▌        | 16/100 [00:05<00:22,  3.69it/s]
+ 17%|█▋        | 17/100 [00:05<00:22,  3.61it/s]
+ 18%|█▊        | 18/100 [00:06<00:22,  3.60it/s]
+ 20%|██        | 20/100 [00:06<00:20,  3.81it/s]
+ 22%|██▏       | 22/100 [00:07<00:18,  4.20it/s]
+ 25%|██▌       | 25/100 [00:07<00:18,  4.07it/s]
+ 26%|██▌       | 26/100 [00:07<00:17,  4.26it/s]
+ 27%|██▋       | 27/100 [00:08<00:18,  3.85it/s]
+ 28%|██▊       | 28/100 [00:08<00:22,  3.26it/s]
+ 29%|██▉       | 29/100 [00:09<00:21,  3.37it/s]
+ 30%|███       | 30/100 [00:09<00:19,  3.61it/s]
+ 32%|███▏      | 32/100 [00:09<00:12,  5.34it/s]
+ 35%|███▌      | 35/100 [00:09<00:07,  8.72it/s]
+ 37%|███▋      | 37/100 [00:09<00:08,  7.22it/s]
+ 39%|███▉      | 39/100 [00:10<00:09,  6.74it/s]
+ 40%|████      | 40/100 [00:10<00:10,  5.91it/s]
+ 41%|████      | 41/100 [00:10<00:11,  5.28it/s]
+ 42%|████▏     | 42/100 [00:10<00:10,  5.42it/s]
+ 43%|████▎     | 43/100 [00:11<00:17,  3.18it/s]
+ 44%|████▍     | 44/100 [00:11<00:14,  3.75it/s]
+ 45%|████▌     | 45/100 [00:12<00:14,  3.92it/s]
+ 46%|████▌     | 46/100 [00:12<00:13,  4.06it/s]
+ 47%|████▋     | 47/100 [00:12<00:11,  4.53it/s]
+ 48%|████▊     | 48/100 [00:12<00:09,  5.25it/s]
+ 49%|████▉     | 49/100 [00:12<00:10,  5.00it/s]
+ 50%|█████     | 50/100 [00:12<00:09,  5.21it/s]
+ 52%|█████▏    | 52/100 [00:13<00:07,  6.48it/s]
+ 54%|█████▍    | 54/100 [00:13<00:06,  6.86it/s]
+ 55%|█████▌    | 55/100 [00:13<00:06,  6.64it/s]
+ 57%|█████▋    | 57/100 [00:13<00:06,  6.72it/s]
+ 58%|█████▊    | 58/100 [00:14<00:07,  5.80it/s]
+ 59%|█████▉    | 59/100 [00:14<00:06,  6.39it/s]
+ 60%|██████    | 60/100 [00:14<00:07,  5.61it/s]
+ 61%|██████    | 61/100 [00:14<00:06,  5.81it/s]
+ 62%|██████▏   | 62/100 [00:14<00:07,  5.23it/s]
+ 63%|██████▎   | 63/100 [00:15<00:06,  5.51it/s]
+ 64%|██████▍   | 64/100 [00:15<00:07,  5.03it/s]
+ 65%|██████▌   | 65/100 [00:15<00:06,  5.38it/s]
+ 66%|██████▌   | 66/100 [00:15<00:06,  4.96it/s]
+ 67%|██████▋   | 67/100 [00:15<00:06,  5.31it/s]
+ 68%|██████▊   | 68/100 [00:16<00:08,  3.90it/s]
+ 69%|██████▉   | 69/100 [00:16<00:09,  3.23it/s]
+ 71%|███████   | 71/100 [00:17<00:08,  3.43it/s]
+ 72%|███████▏  | 72/100 [00:17<00:07,  3.85it/s]
+ 73%|███████▎  | 73/100 [00:17<00:06,  4.22it/s]
+ 74%|███████▍  | 74/100 [00:17<00:05,  4.57it/s]
+ 76%|███████▌  | 76/100 [00:18<00:04,  5.20it/s]
+ 77%|███████▋  | 77/100 [00:18<00:05,  3.98it/s]
+ 78%|███████▊  | 78/100 [00:18<00:04,  4.57it/s]
+ 80%|████████  | 80/100 [00:19<00:05,  3.64it/s]
+ 81%|████████  | 81/100 [00:19<00:06,  3.16it/s]
+ 82%|████████▏ | 82/100 [00:19<00:05,  3.56it/s]
+ 83%|████████▎ | 83/100 [00:20<00:04,  4.00it/s]
+ 84%|████████▍ | 84/100 [00:20<00:03,  4.67it/s]
+ 85%|████████▌ | 85/100 [00:20<00:03,  4.35it/s]
+ 86%|████████▌ | 86/100 [00:20<00:02,  5.00it/s]
+ 87%|████████▋ | 87/100 [00:20<00:02,  5.33it/s]
+ 89%|████████▉ | 89/100 [00:20<00:01,  6.54it/s]
+ 90%|█████████ | 90/100 [00:21<00:01,  5.40it/s]
+ 92%|█████████▏| 92/100 [00:21<00:01,  6.11it/s]
+ 93%|█████████▎| 93/100 [00:21<00:01,  5.69it/s]
+ 94%|█████████▍| 94/100 [00:22<00:01,  4.17it/s]
+ 95%|█████████▌| 95/100 [00:22<00:01,  4.26it/s]
+ 96%|█████████▌| 96/100 [00:22<00:01,  3.86it/s]
+ 98%|█████████▊| 98/100 [00:23<00:00,  4.46it/s]
+ 99%|█████████▉| 99/100 [00:23<00:00,  4.96it/s]
+100%|██████████| 100/100 [00:23<00:00,  4.94it/s]
+100%|██████████| 100/100 [00:23<00:00,  4.27it/s]
+============ Serving Benchmark Result ============
+Successful requests:                     100       
+Benchmark duration (s):                  23.41     
+Total input tokens:                      819100    
+Total generated tokens:                  970       
+Request throughput (req/s):              4.27      
+Output token throughput (tok/s):         41.43     
+Total Token throughput (tok/s):          35028.22  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          12294.65  
+Median TTFT (ms):                        12367.99  
+P99 TTFT (ms):                           22712.64  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          58.90     
+Median TPOT (ms):                        53.15     
+P99 TPOT (ms):                           285.22    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           74.90     
+Median ITL (ms):                         57.30     
+P99 ITL (ms):                            292.16    
+==================================================
+INFO 12-18 19:59:53 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 19:59:53 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 19:59:53 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 19:59:53 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 19:59:54 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 19:59:58 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 19:59:58 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 19:59:58 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 19:59:58 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 19:59:58 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 19:59:58 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 19:59:58 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0xfffcf7197600>, seed=0, num_prompts=100, dataset_name='random', dataset_path=None, custom_output_len=256, custom_skip_chat_template=False, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=8192, random_output_len=32, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, endpoint_type='openai', label=None, backend='vllm', base_url=None, host='127.0.0.1', port=8001, endpoint='/v1/completions', max_concurrency=None, model='pangu_embedded_1b', tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1/', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=True, disable_tqdm=False, profile=False, save_result=False, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='99', goodput=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None)
+WARNING 12-18 20:00:01 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 20:00:01 [datasets.py:355] Sampling input_len from [8191, 8191] and output_len from [32, 32]
+Starting initial single prompt test run...
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|          | 1/100 [00:01<02:28,  1.50s/it]
+  2%|▏         | 2/100 [00:01<01:20,  1.22it/s]
+  3%|▎         | 3/100 [00:02<00:51,  1.87it/s]
+  4%|▍         | 4/100 [00:02<00:37,  2.59it/s]
+  5%|▌         | 5/100 [00:02<00:32,  2.92it/s]
+  7%|▋         | 7/100 [00:02<00:22,  4.19it/s]
+  8%|▊         | 8/100 [00:03<00:26,  3.53it/s]
+  9%|▉         | 9/100 [00:03<00:28,  3.18it/s]
+ 11%|█         | 11/100 [00:04<00:25,  3.55it/s]
+ 12%|█▏        | 12/100 [00:04<00:23,  3.72it/s]
+ 13%|█▎        | 13/100 [00:04<00:22,  3.80it/s]
+ 14%|█▍        | 14/100 [00:04<00:21,  4.08it/s]
+ 15%|█▌        | 15/100 [00:05<00:23,  3.61it/s]
+ 16%|█▌        | 16/100 [00:05<00:23,  3.64it/s]
+ 17%|█▋        | 17/100 [00:05<00:21,  3.91it/s]
+ 18%|█▊        | 18/100 [00:05<00:18,  4.42it/s]
+ 20%|██        | 20/100 [00:06<00:18,  4.41it/s]
+ 21%|██        | 21/100 [00:06<00:18,  4.24it/s]
+ 22%|██▏       | 22/100 [00:06<00:16,  4.84it/s]
+ 23%|██▎       | 23/100 [00:06<00:15,  5.08it/s]
+ 25%|██▌       | 25/100 [00:07<00:19,  3.84it/s]
+ 26%|██▌       | 26/100 [00:07<00:16,  4.40it/s]
+ 27%|██▋       | 27/100 [00:07<00:18,  3.86it/s]
+ 28%|██▊       | 28/100 [00:07<00:16,  4.45it/s]
+ 29%|██▉       | 29/100 [00:08<00:21,  3.35it/s]
+ 30%|███       | 30/100 [00:08<00:21,  3.24it/s]
+ 32%|███▏      | 32/100 [00:09<00:14,  4.65it/s]
+ 34%|███▍      | 34/100 [00:09<00:11,  5.57it/s]
+ 35%|███▌      | 35/100 [00:09<00:12,  5.24it/s]
+ 38%|███▊      | 38/100 [00:09<00:08,  7.05it/s]
+ 39%|███▉      | 39/100 [00:09<00:08,  7.23it/s]
+ 40%|████      | 40/100 [00:10<00:14,  4.06it/s]
+ 41%|████      | 41/100 [00:10<00:13,  4.44it/s]
+ 42%|████▏     | 42/100 [00:10<00:11,  5.07it/s]
+ 43%|████▎     | 43/100 [00:11<00:11,  4.92it/s]
+ 44%|████▍     | 44/100 [00:11<00:10,  5.13it/s]
+ 46%|████▌     | 46/100 [00:11<00:08,  6.01it/s]
+ 47%|████▋     | 47/100 [00:11<00:08,  5.99it/s]
+ 49%|████▉     | 49/100 [00:11<00:07,  7.02it/s]
+ 51%|█████     | 51/100 [00:12<00:07,  6.63it/s]
+ 52%|█████▏    | 52/100 [00:12<00:07,  6.67it/s]
+ 53%|█████▎    | 53/100 [00:12<00:07,  6.22it/s]
+ 54%|█████▍    | 54/100 [00:12<00:07,  6.33it/s]
+ 55%|█████▌    | 55/100 [00:12<00:07,  5.63it/s]
+ 56%|█████▌    | 56/100 [00:13<00:08,  5.47it/s]
+ 57%|█████▋    | 57/100 [00:13<00:07,  5.75it/s]
+ 58%|█████▊    | 58/100 [00:13<00:08,  5.22it/s]
+ 59%|█████▉    | 59/100 [00:13<00:07,  5.57it/s]
+ 60%|██████    | 60/100 [00:13<00:07,  5.47it/s]
+ 61%|██████    | 61/100 [00:14<00:07,  5.05it/s]
+ 62%|██████▏   | 62/100 [00:14<00:09,  4.06it/s]
+ 63%|██████▎   | 63/100 [00:14<00:08,  4.24it/s]
+ 64%|██████▍   | 64/100 [00:15<00:10,  3.42it/s]
+ 65%|██████▌   | 65/100 [00:15<00:11,  2.99it/s]
+ 66%|██████▌   | 66/100 [00:15<00:10,  3.18it/s]
+ 67%|██████▋   | 67/100 [00:16<00:10,  3.09it/s]
+ 68%|██████▊   | 68/100 [00:16<00:10,  2.94it/s]
+ 70%|███████   | 70/100 [00:16<00:06,  4.76it/s]
+ 71%|███████   | 71/100 [00:16<00:06,  4.71it/s]
+ 72%|███████▏  | 72/100 [00:16<00:05,  4.96it/s]
+ 74%|███████▍  | 74/100 [00:17<00:04,  5.48it/s]
+ 75%|███████▌  | 75/100 [00:17<00:05,  4.55it/s]
+ 76%|███████▌  | 76/100 [00:17<00:04,  4.93it/s]
+ 78%|███████▊  | 78/100 [00:17<00:03,  6.62it/s]
+ 79%|███████▉  | 79/100 [00:18<00:04,  4.92it/s]
+ 80%|████████  | 80/100 [00:18<00:05,  3.84it/s]
+ 81%|████████  | 81/100 [00:19<00:05,  3.39it/s]
+ 83%|████████▎ | 83/100 [00:19<00:04,  4.00it/s]
+ 84%|████████▍ | 84/100 [00:19<00:03,  4.12it/s]
+ 86%|████████▌ | 86/100 [00:20<00:02,  4.70it/s]
+ 87%|████████▋ | 87/100 [00:20<00:02,  4.93it/s]
+ 89%|████████▉ | 89/100 [00:20<00:01,  5.70it/s]
+ 90%|█████████ | 90/100 [00:20<00:01,  5.77it/s]
+ 92%|█████████▏| 92/100 [00:20<00:01,  6.37it/s]
+ 93%|█████████▎| 93/100 [00:21<00:01,  5.91it/s]
+ 94%|█████████▍| 94/100 [00:21<00:01,  5.57it/s]
+ 95%|█████████▌| 95/100 [00:21<00:00,  5.70it/s]
+ 96%|█████████▌| 96/100 [00:21<00:00,  4.49it/s]
+ 97%|█████████▋| 97/100 [00:22<00:00,  3.58it/s]
+ 99%|█████████▉| 99/100 [00:22<00:00,  4.56it/s]
+100%|██████████| 100/100 [00:22<00:00,  4.41it/s]
+============ Serving Benchmark Result ============
+Successful requests:                     100       
+Benchmark duration (s):                  22.69     
+Total input tokens:                      819100    
+Total generated tokens:                  970       
+Request throughput (req/s):              4.41      
+Output token throughput (tok/s):         42.75     
+Total Token throughput (tok/s):          36140.83  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          11849.17  
+Median TTFT (ms):                        11924.80  
+P99 TTFT (ms):                           22092.86  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          54.62     
+Median TPOT (ms):                        53.01     
+P99 TPOT (ms):                           171.42    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           65.79     
+Median ITL (ms):                         57.01     
+P99 ITL (ms):                            243.00    
+==================================================
+INFO 12-18 20:00:49 [__init__.py:39] Available plugins for group vllm.platform_plugins:
+INFO 12-18 20:00:49 [__init__.py:41] - ascend -> vllm_ascend:register
+INFO 12-18 20:00:49 [__init__.py:44] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 12-18 20:00:49 [__init__.py:235] Platform plugin ascend is activated
+WARNING 12-18 20:00:50 [_custom_ops.py:20] Failed to import from vllm._C with ImportError('/root/miniconda3/envs/pangu/lib/python3.11/site-packages/vllm/_C.abi3.so: undefined symbol: _ZN3c108ListType3getERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4Type24SingletonOrSharedTypePtrIS9_EE')
+INFO 12-18 20:00:54 [importing.py:63] Triton not installed or not compatible; certain GPU-related functions will not be available.
+WARNING 12-18 20:00:54 [registry.py:413] Model architecture DeepSeekMTPModel is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_mtp:CustomDeepSeekMTP.
+WARNING 12-18 20:00:54 [registry.py:413] Model architecture Qwen2VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_vl:AscendQwen2VLForConditionalGeneration.
+WARNING 12-18 20:00:54 [registry.py:413] Model architecture Qwen2_5_VLForConditionalGeneration is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen2_5_vl:AscendQwen2_5_VLForConditionalGeneration.
+WARNING 12-18 20:00:54 [registry.py:413] Model architecture DeepseekV2ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV2ForCausalLM.
+WARNING 12-18 20:00:54 [registry.py:413] Model architecture DeepseekV3ForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.deepseek_v2:CustomDeepseekV3ForCausalLM.
+WARNING 12-18 20:00:54 [registry.py:413] Model architecture Qwen3MoeForCausalLM is already registered, and will be overwritten by the new model class vllm_ascend.models.qwen3_moe:CustomQwen3MoeForCausalLM.
+Namespace(subparser='bench', bench_type='serve', dispatch_function=<function BenchmarkServingSubcommand.cmd at 0xfffcfd1ff600>, seed=0, num_prompts=100, dataset_name='random', dataset_path=None, custom_output_len=256, custom_skip_chat_template=False, sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=8192, random_output_len=32, random_range_ratio=0.0, random_prefix_len=0, hf_subset=None, hf_split=None, hf_output_len=None, endpoint_type='openai', label=None, backend='vllm', base_url=None, host='127.0.0.1', port=8002, endpoint='/v1/completions', max_concurrency=None, model='pangu_embedded_1b', tokenizer='/opt/pangu/openPangu-Embedded-1B-V1.1/', use_beam_search=False, logprobs=None, request_rate=inf, burstiness=1.0, trust_remote_code=True, disable_tqdm=False, profile=False, save_result=False, save_detailed=False, append_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=False, percentile_metrics='ttft,tpot,itl', metric_percentiles='99', goodput=None, top_p=None, top_k=None, min_p=None, temperature=None, tokenizer_mode='auto', served_model_name=None, lora_modules=None, ramp_up_strategy=None, ramp_up_start_rps=None, ramp_up_end_rps=None)
+WARNING 12-18 20:00:57 [tokenizer.py:262] Using a slow tokenizer. This might cause a significant slowdown. Consider using a fast tokenizer instead.
+INFO 12-18 20:00:58 [datasets.py:355] Sampling input_len from [8191, 8191] and output_len from [32, 32]
+Starting initial single prompt test run...
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1.0 (Poisson process)
+Maximum request concurrency: None
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|          | 1/100 [00:02<03:36,  2.19s/it]
+  3%|▎         | 3/100 [00:02<01:05,  1.48it/s]
+  4%|▍         | 4/100 [00:03<01:01,  1.56it/s]
+  6%|▌         | 6/100 [00:03<00:37,  2.50it/s]
+  8%|▊         | 8/100 [00:03<00:27,  3.30it/s]
+ 10%|█         | 10/100 [00:04<00:24,  3.61it/s]
+ 12%|█▏        | 12/100 [00:04<00:20,  4.26it/s]
+ 13%|█▎        | 13/100 [00:04<00:20,  4.35it/s]
+ 14%|█▍        | 14/100 [00:05<00:22,  3.86it/s]
+ 16%|█▌        | 16/100 [00:05<00:19,  4.28it/s]
+ 18%|█▊        | 18/100 [00:06<00:21,  3.80it/s]
+ 19%|█▉        | 19/100 [00:06<00:25,  3.12it/s]
+ 21%|██        | 21/100 [00:07<00:23,  3.38it/s]
+ 22%|██▏       | 22/100 [00:07<00:22,  3.43it/s]
+ 24%|██▍       | 24/100 [00:07<00:20,  3.78it/s]
+ 25%|██▌       | 25/100 [00:08<00:20,  3.61it/s]
+ 27%|██▋       | 27/100 [00:08<00:18,  3.88it/s]
+ 29%|██▉       | 29/100 [00:08<00:16,  4.33it/s]
+ 31%|███       | 31/100 [00:09<00:16,  4.10it/s]
+ 33%|███▎      | 33/100 [00:09<00:14,  4.68it/s]
+ 35%|███▌      | 35/100 [00:09<00:10,  6.11it/s]
+ 40%|████      | 40/100 [00:10<00:07,  7.59it/s]
+ 41%|████      | 41/100 [00:10<00:09,  6.14it/s]
+ 44%|████▍     | 44/100 [00:10<00:07,  7.94it/s]
+ 46%|████▌     | 46/100 [00:11<00:06,  8.53it/s]
+ 48%|████▊     | 48/100 [00:11<00:06,  7.45it/s]
+ 49%|████▉     | 49/100 [00:11<00:07,  7.05it/s]
+ 50%|█████     | 50/100 [00:11<00:07,  6.68it/s]
+ 52%|█████▏    | 52/100 [00:12<00:06,  7.74it/s]
+ 53%|█████▎    | 53/100 [00:12<00:08,  5.70it/s]
+ 54%|█████▍    | 54/100 [00:12<00:10,  4.58it/s]
+ 55%|█████▌    | 55/100 [00:13<00:11,  3.95it/s]
+ 56%|█████▌    | 56/100 [00:13<00:10,  4.23it/s]
+ 60%|██████    | 60/100 [00:13<00:06,  6.66it/s]
+ 61%|██████    | 61/100 [00:13<00:06,  6.41it/s]
+ 63%|██████▎   | 63/100 [00:14<00:06,  6.05it/s]
+ 66%|██████▌   | 66/100 [00:14<00:05,  5.79it/s]
+ 69%|██████▉   | 69/100 [00:15<00:04,  7.62it/s]
+ 70%|███████   | 70/100 [00:15<00:04,  7.17it/s]
+ 71%|███████   | 71/100 [00:15<00:04,  6.78it/s]
+ 73%|███████▎  | 73/100 [00:15<00:03,  7.78it/s]
+ 74%|███████▍  | 74/100 [00:15<00:03,  7.15it/s]
+ 77%|███████▋  | 77/100 [00:16<00:03,  7.61it/s]
+ 79%|███████▉  | 79/100 [00:16<00:02,  8.39it/s]
+ 80%|████████  | 80/100 [00:16<00:03,  6.13it/s]
+ 81%|████████  | 81/100 [00:17<00:03,  4.89it/s]
+ 83%|████████▎ | 83/100 [00:17<00:02,  6.13it/s]
+ 85%|████████▌ | 85/100 [00:17<00:02,  7.22it/s]
+ 87%|████████▋ | 87/100 [00:17<00:01,  8.14it/s]
+ 88%|████████▊ | 88/100 [00:17<00:01,  7.45it/s]
+ 90%|█████████ | 90/100 [00:18<00:01,  6.64it/s]
+ 91%|█████████ | 91/100 [00:18<00:01,  6.36it/s]
+ 93%|█████████▎| 93/100 [00:18<00:01,  6.06it/s]
+ 94%|█████████▍| 94/100 [00:18<00:01,  5.93it/s]
+ 95%|█████████▌| 95/100 [00:19<00:00,  5.58it/s]
+ 97%|█████████▋| 97/100 [00:19<00:00,  6.69it/s]
+ 98%|█████████▊| 98/100 [00:19<00:00,  7.08it/s]
+100%|██████████| 100/100 [00:19<00:00,  5.14it/s]
+============ Serving Benchmark Result ============
+Successful requests:                     100       
+Benchmark duration (s):                  19.44     
+Total input tokens:                      819100    
+Total generated tokens:                  938       
+Request throughput (req/s):              5.14      
+Output token throughput (tok/s):         48.24     
+Total Token throughput (tok/s):          42174.67  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          10394.21  
+Median TTFT (ms):                        10060.62  
+P99 TTFT (ms):                           18958.61  
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          170.90    
+Median TPOT (ms):                        182.92    
+P99 TPOT (ms):                           436.71    
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           190.16    
+Median ITL (ms):                         183.03    
+P99 ITL (ms):                            540.62    
+==================================================
